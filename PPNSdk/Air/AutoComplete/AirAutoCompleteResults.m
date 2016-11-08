@@ -15,15 +15,14 @@ NSString *const kServiceName = @"air/getAutoComplete";
 
 @implementation AirAutoCompleteResults
 
-- (void)getAutoCompleteModelForString:(NSString *)searchedString withCompletionBlock:(AirAutoCompleteBlock)completionBlock {
+- (void)getAutoCompleteResultsForString:(NSString *)searchedString withCompletionBlock:(AirAutoCompleteBlock)completionBlock {
     
     PPNWebService *service = [[PPNWebService alloc]init];
     [service getResponseForService:kServiceName withDictionary:@{@"string":searchedString,@"cities":@"true",@"airports":@"true"} withCompletionBlock:^(id responseData, NSError *error) {
         
         if (!error) {
-//            NSLog(@"%@",responseData);
-            AirAutoCompleteParser *model = [[AirAutoCompleteParser alloc]initWithJson:responseData];
-            completionBlock(model.airportData,model.cityData, nil);
+            AirAutoCompleteParser *parser = [[AirAutoCompleteParser alloc]initWithJson:responseData];
+            completionBlock(parser.airportData, parser.cityData, nil);
         }
         else {
             NSLog(@"%@",error.localizedDescription);

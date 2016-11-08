@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface PPNServices : NSObject
+
 + (id<NSObject>)sharedServices;
+
 + (void)provideAPIKey:(NSString *)APIKey refid:(NSString *)refid;
+
 @end

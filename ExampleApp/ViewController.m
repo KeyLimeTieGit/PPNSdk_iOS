@@ -7,9 +7,13 @@
 //
 
 #import "ViewController.h"
-@import PPNSdk;
+#import "SearchViewController.h"
 
-@interface ViewController ()
+
+@interface ViewController () <UITextFieldDelegate, SearchVCDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *airportTextField;
+@property (weak, nonatomic) IBOutlet UITextField *departureDateTextField;
+@property (weak, nonatomic) IBOutlet UITextField *returnDateTextField;
 
 @end
 
@@ -18,17 +22,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    AirAutoCompleteResults *autoComplete = [AirAutoCompleteResults new];
-    [autoComplete getAutoCompleteModelForString:@"chicago" withCompletionBlock:^(NSArray *airports, NSArray *cities, NSError *error) {
-        NSLog(@"Airports = %@\nCities = %@",airports, cities);
-    }];
+    _airportTextField.delegate = self;
+   }
+
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    if (textField == _airportTextField) {
+        SearchViewController *vc = [SearchViewController create];
+        [self presentViewController:vc animated:YES completion:nil];
+        vc.delegate = self;
+        return NO;
+    }
+    return YES;
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)didSelectValue:(NSString *)string {
+    _airportTextField.text = string;
 }
 
+- (IBAction)searchPressed:(id)sender {
+    
+}
 
 @end

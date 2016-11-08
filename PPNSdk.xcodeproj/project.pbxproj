@@ -30,6 +30,11 @@
 		9C2DC53A1DD242FB00933515 /* PPNServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2DC5381DD242FB00933515 /* PPNServices.m */; };
 		9C2DC53D1DD2439600933515 /* PPNInternalManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C2DC53B1DD2439600933515 /* PPNInternalManager.h */; };
 		9C2DC53E1DD2439600933515 /* PPNInternalManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2DC53C1DD2439600933515 /* PPNInternalManager.m */; };
+		9C2DC5411DD25C8A00933515 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2DC5401DD25C8A00933515 /* SearchViewController.m */; };
+		9C2DC5441DD2727200933515 /* AirAutoCompleteAirportModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C2DC5421DD2727200933515 /* AirAutoCompleteAirportModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C2DC5451DD2727200933515 /* AirAutoCompleteAirportModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2DC5431DD2727200933515 /* AirAutoCompleteAirportModel.m */; };
+		9C2DC5481DD274C400933515 /* AirAutoCompleteCityModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C2DC5461DD274C400933515 /* AirAutoCompleteCityModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C2DC5491DD274C400933515 /* AirAutoCompleteCityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2DC5471DD274C400933515 /* AirAutoCompleteCityModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +89,12 @@
 		9C2DC5381DD242FB00933515 /* PPNServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPNServices.m; sourceTree = "<group>"; };
 		9C2DC53B1DD2439600933515 /* PPNInternalManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPNInternalManager.h; sourceTree = "<group>"; };
 		9C2DC53C1DD2439600933515 /* PPNInternalManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPNInternalManager.m; sourceTree = "<group>"; };
+		9C2DC53F1DD25C8A00933515 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		9C2DC5401DD25C8A00933515 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		9C2DC5421DD2727200933515 /* AirAutoCompleteAirportModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirAutoCompleteAirportModel.h; sourceTree = "<group>"; };
+		9C2DC5431DD2727200933515 /* AirAutoCompleteAirportModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirAutoCompleteAirportModel.m; sourceTree = "<group>"; };
+		9C2DC5461DD274C400933515 /* AirAutoCompleteCityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirAutoCompleteCityModel.h; sourceTree = "<group>"; };
+		9C2DC5471DD274C400933515 /* AirAutoCompleteCityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirAutoCompleteCityModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,9 +141,9 @@
 				9C2DC51B1DD23FA200933515 /* Data */,
 				9C2DC5191DD23F7800933515 /* Air */,
 				9C2DC4F61DD23F0500933515 /* PPNSdk.h */,
-				9C2DC4F71DD23F0500933515 /* Info.plist */,
 				9C2DC5371DD242FB00933515 /* PPNServices.h */,
 				9C2DC5381DD242FB00933515 /* PPNServices.m */,
+				9C2DC4F71DD23F0500933515 /* Info.plist */,
 			);
 			path = PPNSdk;
 			sourceTree = "<group>";
@@ -144,6 +155,8 @@
 				9C2DC5081DD23F1400933515 /* AppDelegate.m */,
 				9C2DC50A1DD23F1400933515 /* ViewController.h */,
 				9C2DC50B1DD23F1400933515 /* ViewController.m */,
+				9C2DC53F1DD25C8A00933515 /* SearchViewController.h */,
+				9C2DC5401DD25C8A00933515 /* SearchViewController.m */,
 				9C2DC50D1DD23F1400933515 /* Main.storyboard */,
 				9C2DC5101DD23F1400933515 /* Assets.xcassets */,
 				9C2DC5121DD23F1400933515 /* LaunchScreen.storyboard */,
@@ -176,6 +189,10 @@
 				9C2DC51E1DD23FDC00933515 /* AirAutoCompleteParser.m */,
 				9C2DC51F1DD23FDC00933515 /* AirAutoCompleteResults.h */,
 				9C2DC5201DD23FDC00933515 /* AirAutoCompleteResults.m */,
+				9C2DC5421DD2727200933515 /* AirAutoCompleteAirportModel.h */,
+				9C2DC5431DD2727200933515 /* AirAutoCompleteAirportModel.m */,
+				9C2DC5461DD274C400933515 /* AirAutoCompleteCityModel.h */,
+				9C2DC5471DD274C400933515 /* AirAutoCompleteCityModel.m */,
 			);
 			path = AutoComplete;
 			sourceTree = "<group>";
@@ -217,6 +234,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C2DC5441DD2727200933515 /* AirAutoCompleteAirportModel.h in Headers */,
+				9C2DC5481DD274C400933515 /* AirAutoCompleteCityModel.h in Headers */,
 				9C2DC53D1DD2439600933515 /* PPNInternalManager.h in Headers */,
 				9C2DC5391DD242FB00933515 /* PPNServices.h in Headers */,
 				9C2DC52B1DD23FEB00933515 /* PPNWebService.h in Headers */,
@@ -333,7 +352,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C2DC5491DD274C400933515 /* AirAutoCompleteCityModel.m in Sources */,
 				9C2DC53E1DD2439600933515 /* PPNInternalManager.m in Sources */,
+				9C2DC5451DD2727200933515 /* AirAutoCompleteAirportModel.m in Sources */,
 				9C2DC5221DD23FDC00933515 /* AirAutoCompleteParser.m in Sources */,
 				9C2DC52A1DD23FEB00933515 /* PPNClient.m in Sources */,
 				9C2DC53A1DD242FB00933515 /* PPNServices.m in Sources */,
@@ -349,6 +370,7 @@
 			files = (
 				9C2DC50C1DD23F1400933515 /* ViewController.m in Sources */,
 				9C2DC5091DD23F1400933515 /* AppDelegate.m in Sources */,
+				9C2DC5411DD25C8A00933515 /* SearchViewController.m in Sources */,
 				9C2DC5061DD23F1400933515 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -558,6 +580,7 @@
 				9C2DC4FD1DD23F0500933515 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9C2DC5161DD23F1400933515 /* Build configuration list for PBXNativeTarget "ExampleApp" */ = {
 			isa = XCConfigurationList;
@@ -566,6 +589,7 @@
 				9C2DC5181DD23F1400933515 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,6 +8,16 @@
       'contents': [
         {
           'type': 'file',
+          'name': "AirAutoCompleteAirportModel.h",
+          'external-contents': "/Users/sameersiddiqui/Projects/PPNSdk/PPNSdk/Air/AutoComplete/AirAutoCompleteAirportModel.h"
+        },
+        {
+          'type': 'file',
+          'name': "AirAutoCompleteCityModel.h",
+          'external-contents': "/Users/sameersiddiqui/Projects/PPNSdk/PPNSdk/Air/AutoComplete/AirAutoCompleteCityModel.h"
+        },
+        {
+          'type': 'file',
           'name': "AirAutoCompleteResults.h",
           'external-contents': "/Users/sameersiddiqui/Projects/PPNSdk/PPNSdk/Air/AutoComplete/AirAutoCompleteResults.h"
         },

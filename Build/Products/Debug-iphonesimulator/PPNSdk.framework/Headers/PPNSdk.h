@@ -18,6 +18,11 @@ FOUNDATION_EXPORT const unsigned char PPNSdkVersionString[];
 
 #import <PPNSdk/AirAutoCompleteResults.h>
 #import <PPNSdk/PPNServices.h>
+#import <PPNSdk/AirAutoCompleteAirportModel.h>
+#import <PPNSdk/AirAutoCompleteCityModel.h>
+
+
+
 
 
 

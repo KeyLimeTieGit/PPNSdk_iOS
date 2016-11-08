@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,119 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Airport/City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Thx-9D-fov">
+                                <rect key="frame" x="16" y="115" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Departure Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vnA-9a-7Ns">
+                                <rect key="frame" x="16" y="170" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Return Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JJs-KP-OMj">
+                                <rect key="frame" x="16" y="225" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xED-ni-nIs">
+                                <rect key="frame" x="163" y="489" width="48" height="30"/>
+                                <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="searchPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kQA-0M-fI6"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JJs-KP-OMj" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="61k-d4-lsd"/>
+                            <constraint firstItem="vnA-9a-7Ns" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="87N-OL-Syi"/>
+                            <constraint firstItem="xED-ni-nIs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="170.5" id="Htb-rf-ryv"/>
+                            <constraint firstItem="Thx-9D-fov" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Pvx-uF-2uy"/>
+                            <constraint firstItem="Thx-9D-fov" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="U97-Fp-QhC"/>
+                            <constraint firstItem="vnA-9a-7Ns" firstAttribute="top" secondItem="Thx-9D-fov" secondAttribute="bottom" constant="25" id="X2r-Y7-xy1"/>
+                            <constraint firstItem="vnA-9a-7Ns" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Yej-J6-TwE"/>
+                            <constraint firstItem="xED-ni-nIs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cWt-xG-fkE"/>
+                            <constraint firstItem="JJs-KP-OMj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="cwz-x7-9mw"/>
+                            <constraint firstItem="Thx-9D-fov" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="95" id="gMK-Rl-lKN"/>
+                            <constraint firstItem="JJs-KP-OMj" firstAttribute="top" secondItem="vnA-9a-7Ns" secondAttribute="bottom" constant="25" id="i18-qE-CjR"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="airportTextField" destination="Thx-9D-fov" id="Itz-gc-ogb"/>
+                        <outlet property="departureDateTextField" destination="vnA-9a-7Ns" id="QFw-zc-7hU"/>
+                        <outlet property="returnDateTextField" destination="JJs-KP-OMj" id="QdP-UL-bUM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-132" y="139"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="RXq-5F-eAT">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pyI-CF-Enk" customClass="SearchViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bSp-GW-h7K"/>
+                        <viewControllerLayoutGuide type="bottom" id="YUp-4H-9EH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vpg-am-MMh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pIz-le-Jfm">
+                                <rect key="frame" x="0.0" y="72" width="375" height="595"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="pyI-CF-Enk" id="vep-ul-01D"/>
+                                    <outlet property="delegate" destination="pyI-CF-Enk" id="IVH-Jb-AVV"/>
+                                </connections>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="5V3-Rk-U40">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5V3-Rk-U40" firstAttribute="leading" secondItem="vpg-am-MMh" secondAttribute="leading" id="2JL-9h-b4M"/>
+                            <constraint firstItem="YUp-4H-9EH" firstAttribute="top" secondItem="pIz-le-Jfm" secondAttribute="bottom" id="6Oh-eX-xZ5"/>
+                            <constraint firstAttribute="trailing" secondItem="pIz-le-Jfm" secondAttribute="trailing" id="8uM-cl-lpg"/>
+                            <constraint firstAttribute="trailing" secondItem="5V3-Rk-U40" secondAttribute="trailing" id="HrA-S7-fcU"/>
+                            <constraint firstItem="pIz-le-Jfm" firstAttribute="top" secondItem="5V3-Rk-U40" secondAttribute="bottom" id="RMi-Fv-Ly1"/>
+                            <constraint firstItem="pIz-le-Jfm" firstAttribute="leading" secondItem="vpg-am-MMh" secondAttribute="leading" id="hHC-kF-5np"/>
+                            <constraint firstItem="5V3-Rk-U40" firstAttribute="top" secondItem="bSp-GW-h7K" secondAttribute="bottom" constant="8" id="jmz-Cf-xva"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="5V3-Rk-U40" id="RUe-uN-3cr"/>
+                        <outlet property="searchDisplayController" destination="Xzh-Pk-BfC" id="Flz-DL-SS1"/>
+                        <outlet property="tableView" destination="pIz-le-Jfm" id="Sex-sH-bke"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ana-ld-fuY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="eGq-BQ-PW9">
+                    <connections>
+                        <outlet property="delegate" destination="pyI-CF-Enk" id="ZqF-gl-uUE"/>
+                        <outlet property="searchContentsController" destination="pyI-CF-Enk" id="VKi-TG-dQf"/>
+                        <outlet property="searchResultsDataSource" destination="pyI-CF-Enk" id="Zey-j9-rgS"/>
+                        <outlet property="searchResultsDelegate" destination="pyI-CF-Enk" id="20W-NX-ORq"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="Xzh-Pk-BfC">
+                    <connections>
+                        <outlet property="delegate" destination="pyI-CF-Enk" id="vdD-wW-j4g"/>
+                        <outlet property="searchContentsController" destination="pyI-CF-Enk" id="ill-64-sAp"/>
+                        <outlet property="searchResultsDataSource" destination="pyI-CF-Enk" id="AKe-BO-TTm"/>
+                        <outlet property="searchResultsDelegate" destination="pyI-CF-Enk" id="XIH-Xn-i9g"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="789.60000000000002" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>

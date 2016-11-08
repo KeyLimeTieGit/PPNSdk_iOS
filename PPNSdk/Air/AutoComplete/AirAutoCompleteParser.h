@@ -11,6 +11,7 @@
 @interface AirAutoCompleteParser : NSObject
 
 - (instancetype)initWithJson:(NSDictionary *)json;
+
 @property (weak, nonatomic, readonly) NSArray *airportData;
 @property (weak, nonatomic, readonly) NSArray *cityData;
 

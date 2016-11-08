@@ -12,6 +12,6 @@
 
 typedef void(^AirAutoCompleteBlock)(NSArray *airports, NSArray *cities, NSError *error);
 
-- (void)getAutoCompleteModelForString:(NSString *)searchedString withCompletionBlock:(AirAutoCompleteBlock)completionBlock;
+- (void)getAutoCompleteResultsForString:(NSString *)searchedString withCompletionBlock:(AirAutoCompleteBlock)completionBlock;
 
 @end
