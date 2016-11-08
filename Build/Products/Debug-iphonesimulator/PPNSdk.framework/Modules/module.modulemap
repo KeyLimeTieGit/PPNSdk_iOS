@@ -1,0 +1,6 @@
+framework module PPNSdk {
+  umbrella header "PPNSdk.h"
+
+  export *
+  module * { export * }
+}
