@@ -35,6 +35,12 @@
 		9C2DC5451DD2727200933515 /* AirAutoCompleteAirportModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2DC5431DD2727200933515 /* AirAutoCompleteAirportModel.m */; };
 		9C2DC5481DD274C400933515 /* AirAutoCompleteCityModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C2DC5461DD274C400933515 /* AirAutoCompleteCityModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C2DC5491DD274C400933515 /* AirAutoCompleteCityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2DC5471DD274C400933515 /* AirAutoCompleteCityModel.m */; };
+		9C2DC54D1DD279A500933515 /* FlightDepartureResults.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C2DC54B1DD279A500933515 /* FlightDepartureResults.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C2DC54E1DD279A500933515 /* FlightDepartureResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2DC54C1DD279A500933515 /* FlightDepartureResults.m */; };
+		9C2DC5511DD2802E00933515 /* FlightDepartureParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C2DC54F1DD2802E00933515 /* FlightDepartureParser.h */; };
+		9C2DC5521DD2802E00933515 /* FlightDepartureParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2DC5501DD2802E00933515 /* FlightDepartureParser.m */; };
+		9C2DC5551DD2874600933515 /* FlightDepartureItineraryModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C2DC5531DD2874600933515 /* FlightDepartureItineraryModel.h */; };
+		9C2DC5561DD2874600933515 /* FlightDepartureItineraryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2DC5541DD2874600933515 /* FlightDepartureItineraryModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +101,12 @@
 		9C2DC5431DD2727200933515 /* AirAutoCompleteAirportModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirAutoCompleteAirportModel.m; sourceTree = "<group>"; };
 		9C2DC5461DD274C400933515 /* AirAutoCompleteCityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirAutoCompleteCityModel.h; sourceTree = "<group>"; };
 		9C2DC5471DD274C400933515 /* AirAutoCompleteCityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirAutoCompleteCityModel.m; sourceTree = "<group>"; };
+		9C2DC54B1DD279A500933515 /* FlightDepartureResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlightDepartureResults.h; sourceTree = "<group>"; };
+		9C2DC54C1DD279A500933515 /* FlightDepartureResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlightDepartureResults.m; sourceTree = "<group>"; };
+		9C2DC54F1DD2802E00933515 /* FlightDepartureParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlightDepartureParser.h; sourceTree = "<group>"; };
+		9C2DC5501DD2802E00933515 /* FlightDepartureParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlightDepartureParser.m; sourceTree = "<group>"; };
+		9C2DC5531DD2874600933515 /* FlightDepartureItineraryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlightDepartureItineraryModel.h; sourceTree = "<group>"; };
+		9C2DC5541DD2874600933515 /* FlightDepartureItineraryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlightDepartureItineraryModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +189,7 @@
 		9C2DC5191DD23F7800933515 /* Air */ = {
 			isa = PBXGroup;
 			children = (
+				9C2DC54A1DD2796500933515 /* FlightDepartures */,
 				9C2DC51A1DD23F7C00933515 /* AutoComplete */,
 			);
 			path = Air;
@@ -227,6 +240,19 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		9C2DC54A1DD2796500933515 /* FlightDepartures */ = {
+			isa = PBXGroup;
+			children = (
+				9C2DC54B1DD279A500933515 /* FlightDepartureResults.h */,
+				9C2DC54C1DD279A500933515 /* FlightDepartureResults.m */,
+				9C2DC54F1DD2802E00933515 /* FlightDepartureParser.h */,
+				9C2DC5501DD2802E00933515 /* FlightDepartureParser.m */,
+				9C2DC5531DD2874600933515 /* FlightDepartureItineraryModel.h */,
+				9C2DC5541DD2874600933515 /* FlightDepartureItineraryModel.m */,
+			);
+			path = FlightDepartures;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -234,14 +260,17 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C2DC5511DD2802E00933515 /* FlightDepartureParser.h in Headers */,
 				9C2DC5441DD2727200933515 /* AirAutoCompleteAirportModel.h in Headers */,
 				9C2DC5481DD274C400933515 /* AirAutoCompleteCityModel.h in Headers */,
 				9C2DC53D1DD2439600933515 /* PPNInternalManager.h in Headers */,
 				9C2DC5391DD242FB00933515 /* PPNServices.h in Headers */,
+				9C2DC54D1DD279A500933515 /* FlightDepartureResults.h in Headers */,
 				9C2DC52B1DD23FEB00933515 /* PPNWebService.h in Headers */,
 				9C2DC5231DD23FDC00933515 /* AirAutoCompleteResults.h in Headers */,
 				9C2DC5211DD23FDC00933515 /* AirAutoCompleteParser.h in Headers */,
 				9C2DC5291DD23FEB00933515 /* PPNClient.h in Headers */,
+				9C2DC5551DD2874600933515 /* FlightDepartureItineraryModel.h in Headers */,
 				9C2DC5301DD2403300933515 /* SSOrderedDictionary.h in Headers */,
 				9C2DC4F81DD23F0500933515 /* PPNSdk.h in Headers */,
 			);
@@ -356,7 +385,10 @@
 				9C2DC53E1DD2439600933515 /* PPNInternalManager.m in Sources */,
 				9C2DC5451DD2727200933515 /* AirAutoCompleteAirportModel.m in Sources */,
 				9C2DC5221DD23FDC00933515 /* AirAutoCompleteParser.m in Sources */,
+				9C2DC5561DD2874600933515 /* FlightDepartureItineraryModel.m in Sources */,
 				9C2DC52A1DD23FEB00933515 /* PPNClient.m in Sources */,
+				9C2DC54E1DD279A500933515 /* FlightDepartureResults.m in Sources */,
+				9C2DC5521DD2802E00933515 /* FlightDepartureParser.m in Sources */,
 				9C2DC53A1DD242FB00933515 /* PPNServices.m in Sources */,
 				9C2DC5241DD23FDC00933515 /* AirAutoCompleteResults.m in Sources */,
 				9C2DC52C1DD23FEB00933515 /* PPNWebService.m in Sources */,

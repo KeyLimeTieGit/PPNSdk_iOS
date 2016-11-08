@@ -14,6 +14,7 @@
 
 @property (strong, nonatomic) NSString *api_key;
 @property (strong, nonatomic) NSString *refid;
+@property (strong, nonatomic) NSString *sessionID;
 
 
 @end

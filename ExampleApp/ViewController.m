@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "SearchViewController.h"
 
+@import PPNSdk;
 
 @interface ViewController () <UITextFieldDelegate, SearchVCDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *airportTextField;
@@ -23,7 +24,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     _airportTextField.delegate = self;
-   }
+    
+    FlightDepartureResults *fdr = [FlightDepartureResults new];
+    [fdr getFlightDepartureResultsForNumberOfAdults:1 originAirport:@"ORD" destinationAirport:@"YYZ" departureDate:@"2016-11-17" withCompletionBlock:^(NSArray *itineraries, NSError *error) {
+        
+    }];
+    
+    
+}
 
 -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
     if (textField == _airportTextField) {

@@ -19,4 +19,11 @@
     
     return _manager;
 }
+
+- (id)init {
+    if (self = [super init]) {
+        self.sessionID = [[[NSProcessInfo processInfo] globallyUniqueString] stringByReplacingOccurrencesOfString:@"-" withString:@""];
+    }
+    return self;
+}
 @end
