@@ -39,6 +39,16 @@
     return [self.json objectForKey:@"price_details"];
 }
 
+- (NSDictionary *)slice_data{
+    NSMutableArray *mut = [NSMutableArray new];
+    NSDictionary *slice = [self.json objectForKey:@"slice_data"];
+    for (NSString *key in slice) {
+        [mut addObject:[slice objectForKey:key]];
+    }
+    
+    return [mut objectAtIndex:0];
+}
+
 - (NSString *)currency {
     return [[self priceDetails] objectForKey:@"display_currency"];
 }
@@ -77,6 +87,119 @@
 
 - (NSString *)ppn_seat_bundle {
     return [self.json objectForKey:@"ppn_seat_bundle"];
+}
+
+- (NSString *)flight_duration {
+    return [[[self slice_data] objectForKey:@"info"] objectForKey:@"duration"];
+}
+
+- (int)connection_count {
+    return [[[[self slice_data] objectForKey:@"info"] objectForKey:@"connection_count"] intValue];
+}
+
+- (int)stop_count {
+    return [[[[self slice_data] objectForKey:@"info"] objectForKey:@"stop_count"] intValue];
+}
+
+- (NSString *)notes {
+    return [[[self slice_data] objectForKey:@"info"] objectForKey:@"notes"];
+}
+
+- (NSString *)airline_code {
+    return [[[self slice_data] objectForKey:@"airline"] objectForKey:@"code"];
+}
+
+- (NSString *)airline_name {
+    return [[[self slice_data] objectForKey:@"airline"] objectForKey:@"name"];
+}
+
+- (NSString *)airline_logo {
+    return [[[self slice_data] objectForKey:@"airline"] objectForKey:@"logo"];
+}
+
+- (int)airline_count {
+    return [[[[self slice_data] objectForKey:@"airline"] objectForKey:@"airline_count"] intValue];
+}
+
+- (NSString *)departure_airport_code {
+    return [[[[self slice_data] objectForKey:@"departure"] objectForKey:@"airport"] objectForKey:@"code"];
+}
+
+- (NSString *)departure_airport_name {
+    return [[[[self slice_data] objectForKey:@"departure"] objectForKey:@"airport"] objectForKey:@"name"];
+}
+
+- (NSString *)departure_airport_city {
+    return [[[[self slice_data] objectForKey:@"departure"] objectForKey:@"airport"] objectForKey:@"city"];
+}
+
+- (NSString *)departure_airport_state {
+    return [[[[self slice_data] objectForKey:@"departure"] objectForKey:@"airport"] objectForKey:@"state"];
+}
+
+-(NSString *)departure_airport_country {
+    return [[[[self slice_data] objectForKey:@"departure"] objectForKey:@"airport"] objectForKey:@"country"];
+}
+
+- (NSString *)departure_date {
+    return [[[[self slice_data] objectForKey:@"departure"] objectForKey:@"datetime"] objectForKey:@"date"];
+}
+
+- (NSString *)departure_date_long {
+    return [[[[self slice_data] objectForKey:@"departure"] objectForKey:@"datetime"] objectForKey:@"date_display"];
+}
+
+- (NSString *)departure_time_12h {
+    return [[[[self slice_data] objectForKey:@"departure"] objectForKey:@"datetime"] objectForKey:@"time_12h"];
+}
+
+- (NSString *)departure_time_24h {
+    return [[[[self slice_data] objectForKey:@"departure"] objectForKey:@"datetime"] objectForKey:@"time_24h"];
+}
+
+- (NSString *)arrival_airport_code {
+    return [[[[self slice_data] objectForKey:@"arrival"] objectForKey:@"airport"] objectForKey:@"code"];
+}
+
+- (NSString *)arrival_airport_name {
+    return [[[[self slice_data] objectForKey:@"arrival"] objectForKey:@"airport"] objectForKey:@"name"];
+}
+
+- (NSString *)arrival_airport_city {
+    return [[[[self slice_data] objectForKey:@"arrival"] objectForKey:@"airport"] objectForKey:@"city"];
+}
+
+- (NSString *)arrival_airport_state {
+    return [[[[self slice_data] objectForKey:@"arrival"] objectForKey:@"airport"] objectForKey:@"state"];
+}
+
+-(NSString *)arrival_airport_country {
+    return [[[[self slice_data] objectForKey:@"arrival"] objectForKey:@"airport"] objectForKey:@"country"];
+}
+
+- (NSString *)arrival_date {
+    return [[[[self slice_data] objectForKey:@"arrival"] objectForKey:@"datetime"] objectForKey:@"date"];
+}
+
+- (NSString *)arrival_date_long {
+    return [[[[self slice_data] objectForKey:@"arrival"] objectForKey:@"datetime"] objectForKey:@"date_display"];
+}
+
+- (NSString *)arrival_time_12h {
+    return [[[[self slice_data] objectForKey:@"arrival"] objectForKey:@"datetime"] objectForKey:@"time_12h"];
+}
+
+- (NSString *)arrival_time_24h {
+    return [[[[self slice_data] objectForKey:@"arrival"] objectForKey:@"datetime"] objectForKey:@"time_24h"];
+}
+
+- (NSArray *)connections {
+    NSMutableArray *mut = [NSMutableArray new];
+    NSDictionary *connectiondata = [[self slice_data] objectForKey:@"flight_data"];
+    for (NSString *key in connectiondata) {
+        [mut addObject:[connectiondata objectForKey:key]];
+    }
+    return mut;
 }
 
 

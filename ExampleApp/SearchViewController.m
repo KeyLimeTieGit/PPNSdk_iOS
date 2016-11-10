@@ -22,11 +22,13 @@
 @implementation SearchViewController {
     NSArray *citiesArray;
     NSArray *airportsArray;
+    BOOL departures;
 }
 
-+ (SearchViewController *)create {
++ (SearchViewController *)createForDepartures:(BOOL)departures {
     NSBundle *frameworkBundle = [NSBundle bundleForClass:[self class]];
     SearchViewController *main = [[UIStoryboard storyboardWithName:@"Main" bundle:frameworkBundle] instantiateViewControllerWithIdentifier:NSStringFromClass([SearchViewController class])];
+    main->departures = departures;
     return main;
 }
 
@@ -34,12 +36,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.searchBar.delegate = self;
+    self.searchBar.showsCancelButton = YES;
+    self.searchBar.placeholder = @"Departure City or Airport";
+    [self.searchBar becomeFirstResponder];
 }
 
 - (void)getDataForString:(NSString *)string {
     AirAutoCompleteResults *autoComplete = [AirAutoCompleteResults new];
     [autoComplete getAutoCompleteResultsForString:string withCompletionBlock:^(NSArray *airports, NSArray *cities, NSError *error) {
-//        NSLog(@"Airports = %@\nCities = %@",airports, cities);
         if (!error) {
             if (airports.count > 0) {
                 airportsArray = airports;
@@ -50,7 +54,6 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.tableView reloadData];
             });
-
         }
     }];
 
@@ -75,15 +78,17 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell;
-    cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+    cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil];
     if (indexPath.section == 0) {
         AirAutoCompleteAirportModel *airportModel = [[AirAutoCompleteAirportModel alloc]initWithJson:[airportsArray objectAtIndex:indexPath.row]];
         cell.textLabel.text = airportModel.airport;
+        cell.detailTextLabel.text = airportModel.city;
 
     }
     else {
         AirAutoCompleteCityModel *cityModel = [[AirAutoCompleteCityModel alloc]initWithJson:[citiesArray objectAtIndex:indexPath.row]];
         cell.textLabel.text = cityModel.city;
+        cell.detailTextLabel.text = @"All Airports";
     }
     return cell;
 }
@@ -106,13 +111,11 @@
     
     if (indexPath.section == 0) {
         AirAutoCompleteAirportModel *airportModel = [[AirAutoCompleteAirportModel alloc]initWithJson:[airportsArray objectAtIndex:indexPath.row]];
-        [self.delegate didSelectValue:airportModel.airport];
-        
+        [self.delegate didSelectValue:airportModel.airport forKey:airportModel.iata withSearchType:departures?Departures:Arrivals andTravelType:Airport];
     }
     else {
         AirAutoCompleteCityModel *cityModel = [[AirAutoCompleteCityModel alloc]initWithJson:[citiesArray objectAtIndex:indexPath.row]];
-        [self.delegate didSelectValue:cityModel.city];
-        
+        [self.delegate didSelectValue:cityModel.city forKey:cityModel.cityid_ppn withSearchType:departures?Departures:Arrivals andTravelType:City];
     }
     
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -122,6 +125,11 @@
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
     [self getDataForString:searchText];
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
+    [self dismissViewControllerAnimated:YES completion:nil];
+
 }
 
 @end

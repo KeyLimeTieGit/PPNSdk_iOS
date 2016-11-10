@@ -8,14 +8,25 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger, SearchType) {
+    Departures,
+    Arrivals
+};
+
+typedef NS_ENUM(NSInteger, TravelType) {
+    Airport,
+    City
+};
+
+
 @protocol SearchVCDelegate <NSObject>
 
-- (void)didSelectValue:(NSString *)string;
+- (void)didSelectValue:(NSString *)string forKey:(NSString *)key withSearchType:(SearchType)searchType andTravelType:(TravelType)travelType ;
 
 @end
 
 @interface SearchViewController : UIViewController
-+ (SearchViewController *)create;
++ (SearchViewController *)createForDepartures:(BOOL)departures;
 @property (weak, nonatomic) id <SearchVCDelegate> delegate;
 
 @end

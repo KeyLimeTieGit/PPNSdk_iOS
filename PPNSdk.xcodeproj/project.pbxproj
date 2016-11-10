@@ -39,8 +39,9 @@
 		9C2DC54E1DD279A500933515 /* FlightDepartureResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2DC54C1DD279A500933515 /* FlightDepartureResults.m */; };
 		9C2DC5511DD2802E00933515 /* FlightDepartureParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C2DC54F1DD2802E00933515 /* FlightDepartureParser.h */; };
 		9C2DC5521DD2802E00933515 /* FlightDepartureParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2DC5501DD2802E00933515 /* FlightDepartureParser.m */; };
-		9C2DC5551DD2874600933515 /* FlightDepartureItineraryModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C2DC5531DD2874600933515 /* FlightDepartureItineraryModel.h */; };
+		9C2DC5551DD2874600933515 /* FlightDepartureItineraryModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C2DC5531DD2874600933515 /* FlightDepartureItineraryModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C2DC5561DD2874600933515 /* FlightDepartureItineraryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2DC5541DD2874600933515 /* FlightDepartureItineraryModel.m */; };
+		9C2DC5591DD3B61E00933515 /* departuresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2DC5581DD3B61E00933515 /* departuresViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,8 @@
 		9C2DC5501DD2802E00933515 /* FlightDepartureParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlightDepartureParser.m; sourceTree = "<group>"; };
 		9C2DC5531DD2874600933515 /* FlightDepartureItineraryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlightDepartureItineraryModel.h; sourceTree = "<group>"; };
 		9C2DC5541DD2874600933515 /* FlightDepartureItineraryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlightDepartureItineraryModel.m; sourceTree = "<group>"; };
+		9C2DC5571DD3B61E00933515 /* departuresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = departuresViewController.h; sourceTree = "<group>"; };
+		9C2DC5581DD3B61E00933515 /* departuresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = departuresViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +172,8 @@
 				9C2DC50B1DD23F1400933515 /* ViewController.m */,
 				9C2DC53F1DD25C8A00933515 /* SearchViewController.h */,
 				9C2DC5401DD25C8A00933515 /* SearchViewController.m */,
+				9C2DC5571DD3B61E00933515 /* departuresViewController.h */,
+				9C2DC5581DD3B61E00933515 /* departuresViewController.m */,
 				9C2DC50D1DD23F1400933515 /* Main.storyboard */,
 				9C2DC5101DD23F1400933515 /* Assets.xcassets */,
 				9C2DC5121DD23F1400933515 /* LaunchScreen.storyboard */,
@@ -265,12 +270,12 @@
 				9C2DC5481DD274C400933515 /* AirAutoCompleteCityModel.h in Headers */,
 				9C2DC53D1DD2439600933515 /* PPNInternalManager.h in Headers */,
 				9C2DC5391DD242FB00933515 /* PPNServices.h in Headers */,
+				9C2DC5551DD2874600933515 /* FlightDepartureItineraryModel.h in Headers */,
 				9C2DC54D1DD279A500933515 /* FlightDepartureResults.h in Headers */,
 				9C2DC52B1DD23FEB00933515 /* PPNWebService.h in Headers */,
 				9C2DC5231DD23FDC00933515 /* AirAutoCompleteResults.h in Headers */,
 				9C2DC5211DD23FDC00933515 /* AirAutoCompleteParser.h in Headers */,
 				9C2DC5291DD23FEB00933515 /* PPNClient.h in Headers */,
-				9C2DC5551DD2874600933515 /* FlightDepartureItineraryModel.h in Headers */,
 				9C2DC5301DD2403300933515 /* SSOrderedDictionary.h in Headers */,
 				9C2DC4F81DD23F0500933515 /* PPNSdk.h in Headers */,
 			);
@@ -401,6 +406,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C2DC50C1DD23F1400933515 /* ViewController.m in Sources */,
+				9C2DC5591DD3B61E00933515 /* departuresViewController.m in Sources */,
 				9C2DC5091DD23F1400933515 /* AppDelegate.m in Sources */,
 				9C2DC5411DD25C8A00933515 /* SearchViewController.m in Sources */,
 				9C2DC5061DD23F1400933515 /* main.m in Sources */,

@@ -23,6 +23,11 @@
         },
         {
           'type': 'file',
+          'name': "FlightDepartureItineraryModel.h",
+          'external-contents': "/Users/sameersiddiqui/Projects/PPNSdk/PPNSdk/Air/FlightDepartures/FlightDepartureItineraryModel.h"
+        },
+        {
+          'type': 'file',
           'name': "FlightDepartureResults.h",
           'external-contents': "/Users/sameersiddiqui/Projects/PPNSdk/PPNSdk/Air/FlightDepartures/FlightDepartureResults.h"
         },

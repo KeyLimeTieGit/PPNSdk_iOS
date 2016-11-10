@@ -21,6 +21,8 @@ FOUNDATION_EXPORT const unsigned char PPNSdkVersionString[];
 #import <PPNSdk/AirAutoCompleteAirportModel.h>
 #import <PPNSdk/AirAutoCompleteCityModel.h>
 #import <PPNSdk/FlightDepartureResults.h>
+#import <PPNSdk/FlightDepartureItineraryModel.h>
+
 
 
 

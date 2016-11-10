@@ -12,6 +12,7 @@
 
 typedef void(^FlightDepartureCompletionBlock)(NSArray *itineraries, NSError *error);
 
-- (void)getFlightDepartureResultsForNumberOfAdults:(int)adults originAirport:(NSString *)origin destinationAirport:(NSString *)destination departureDate:(NSString *)departure withCompletionBlock:(FlightDepartureCompletionBlock)completionBlock;
+
+- (void)getFlightDepartureResultsForNumberOfAdults:(int)adults originCode:(NSString *)origin destinationCode:(NSString *)destination departureDate:(NSString *)departure withCompletionBlock:(FlightDepartureCompletionBlock)completionBlock;
 
 @end

@@ -16,13 +16,17 @@
 		<data>
 		sqhuLenGx518GgVhfSpzOem5wbo=
 		</data>
+		<key>Headers/FlightDepartureItineraryModel.h</key>
+		<data>
+		Dw19EQva01VVaBHbBCDIejVh/qU=
+		</data>
 		<key>Headers/FlightDepartureResults.h</key>
 		<data>
-		J48dR68Z2175z9X4sfQl/CvCTsk=
+		GaKvI+EqhbzzT38usQhon6G5eZQ=
 		</data>
 		<key>Headers/PPNSdk.h</key>
 		<data>
-		IP6wqCfRWfKKGLR/W+Zvq+xHoHs=
+		U9mWbutOf4DVT3jc9upAtX+l9Aw=
 		</data>
 		<key>Headers/PPNServices.h</key>
 		<data>
@@ -72,26 +76,37 @@
 			gFbQBRRgDvFAjbtuHjbD8cdWBGNkM332FCL825aTvPQ=
 			</data>
 		</dict>
+		<key>Headers/FlightDepartureItineraryModel.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Dw19EQva01VVaBHbBCDIejVh/qU=
+			</data>
+			<key>hash2</key>
+			<data>
+			6/AYq9KtPx+7CkAc2BoqOch31Y/1La+yvk751i64+Yg=
+			</data>
+		</dict>
 		<key>Headers/FlightDepartureResults.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			J48dR68Z2175z9X4sfQl/CvCTsk=
+			GaKvI+EqhbzzT38usQhon6G5eZQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			z5C4KYqLmIpLNnELkvN3ItkOAUr00HpX+6O2gcF1WfI=
+			RHNbiHRATAbzGbuqrHo6MQkKWwIrJ7scHknXRNre8xA=
 			</data>
 		</dict>
 		<key>Headers/PPNSdk.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			IP6wqCfRWfKKGLR/W+Zvq+xHoHs=
+			U9mWbutOf4DVT3jc9upAtX+l9Aw=
 			</data>
 			<key>hash2</key>
 			<data>
-			u71Ddk2FvnQtJ2Y0FTbMzQUIJO3JkYo1ee3HXam5CnM=
+			KLJnYMnoJlTsN/2dkrX1Wnh86O9Wy3RV2GqkoQe8660=
 			</data>
 		</dict>
 		<key>Headers/PPNServices.h</key>

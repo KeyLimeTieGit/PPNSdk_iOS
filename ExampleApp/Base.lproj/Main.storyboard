@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0Tx-JE-O27">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -22,20 +22,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Airport/City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Thx-9D-fov">
-                                <rect key="frame" x="16" y="115" width="343" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Arrival Airport/City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Thx-9D-fov">
+                                <rect key="frame" x="16" y="159" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Departure Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vnA-9a-7Ns">
-                                <rect key="frame" x="16" y="170" width="343" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Return Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JJs-KP-OMj">
-                                <rect key="frame" x="16" y="225" width="343" height="30"/>
+                                <rect key="frame" x="16" y="214" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -47,31 +41,38 @@
                                     <action selector="searchPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kQA-0M-fI6"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Departure Airport/City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZlF-qo-EKG">
+                                <rect key="frame" x="16" y="109" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="JJs-KP-OMj" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="61k-d4-lsd"/>
+                            <constraint firstItem="ZlF-qo-EKG" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="3oD-d7-79h"/>
                             <constraint firstItem="vnA-9a-7Ns" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="87N-OL-Syi"/>
                             <constraint firstItem="xED-ni-nIs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="170.5" id="Htb-rf-ryv"/>
+                            <constraint firstItem="ZlF-qo-EKG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Pd0-bi-YsY"/>
                             <constraint firstItem="Thx-9D-fov" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Pvx-uF-2uy"/>
                             <constraint firstItem="Thx-9D-fov" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="U97-Fp-QhC"/>
                             <constraint firstItem="vnA-9a-7Ns" firstAttribute="top" secondItem="Thx-9D-fov" secondAttribute="bottom" constant="25" id="X2r-Y7-xy1"/>
                             <constraint firstItem="vnA-9a-7Ns" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Yej-J6-TwE"/>
                             <constraint firstItem="xED-ni-nIs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cWt-xG-fkE"/>
-                            <constraint firstItem="JJs-KP-OMj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="cwz-x7-9mw"/>
+                            <constraint firstItem="ZlF-qo-EKG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="45" id="doJ-Eu-fHd"/>
                             <constraint firstItem="Thx-9D-fov" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="95" id="gMK-Rl-lKN"/>
-                            <constraint firstItem="JJs-KP-OMj" firstAttribute="top" secondItem="vnA-9a-7Ns" secondAttribute="bottom" constant="25" id="i18-qE-CjR"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="1OB-jl-cL7"/>
                     <connections>
-                        <outlet property="airportTextField" destination="Thx-9D-fov" id="Itz-gc-ogb"/>
+                        <outlet property="arrivalAirportTextField" destination="Thx-9D-fov" id="yHy-O7-bq1"/>
+                        <outlet property="departureAirportTextField" destination="ZlF-qo-EKG" id="4iY-fB-BFW"/>
                         <outlet property="departureDateTextField" destination="vnA-9a-7Ns" id="QFw-zc-7hU"/>
-                        <outlet property="returnDateTextField" destination="JJs-KP-OMj" id="QdP-UL-bUM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-132" y="139"/>
+            <point key="canvasLocation" x="807.20000000000005" y="138.98050974512745"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="RXq-5F-eAT">
@@ -133,7 +134,62 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="789.60000000000002" y="138.98050974512745"/>
+            <point key="canvasLocation" x="1728.8" y="138.98050974512745"/>
+        </scene>
+        <!--Departures View Controller-->
+        <scene sceneID="8xU-kj-HgV">
+            <objects>
+                <viewController storyboardIdentifier="departuresViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="enK-eW-HM8" customClass="departuresViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nPM-Kd-qAc"/>
+                        <viewControllerLayoutGuide type="bottom" id="mXf-RF-tAt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RVL-CI-xOm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wjz-Yj-B30">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="enK-eW-HM8" id="rpl-Ss-7jy"/>
+                                    <outlet property="delegate" destination="enK-eW-HM8" id="uNi-yz-WKq"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="wjz-Yj-B30" secondAttribute="trailing" id="C1y-qh-abV"/>
+                            <constraint firstItem="wjz-Yj-B30" firstAttribute="leading" secondItem="RVL-CI-xOm" secondAttribute="leading" id="StP-ba-6mD"/>
+                            <constraint firstItem="mXf-RF-tAt" firstAttribute="top" secondItem="wjz-Yj-B30" secondAttribute="bottom" id="fwb-kB-tk5"/>
+                            <constraint firstItem="wjz-Yj-B30" firstAttribute="top" secondItem="RVL-CI-xOm" secondAttribute="top" id="uck-Qf-FHw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="wjz-Yj-B30" id="RAi-GY-x8g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mOa-fq-C5k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2639.1999999999998" y="174.06296851574214"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pbK-nD-BuY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Tx-JE-O27" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YAg-ZP-xqW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="sJt-kO-oTb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qwi-n3-UGC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-132" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>
