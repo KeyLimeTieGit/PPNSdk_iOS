@@ -42,8 +42,23 @@
 }
 
 - (void)getDataForString:(NSString *)string {
-    AirAutoCompleteResults *autoComplete = [AirAutoCompleteResults new];
-    [autoComplete getAutoCompleteResultsForString:string withCompletionBlock:^(NSArray *airports, NSArray *cities, NSError *error) {
+//    AirAutoCompleteResults *autoComplete = [AirAutoCompleteResults new];
+//    [autoComplete getAutoCompleteResultsForString:string withCompletionBlock:^(NSArray *airports, NSArray *cities, NSError *error) {
+//        if (!error) {
+//            if (airports.count > 0) {
+//                airportsArray = airports;
+//            }
+//            if (cities.count > 0) {
+//                citiesArray = cities;
+//            }
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                [self.tableView reloadData];
+//            });
+//        }
+//    }];
+    
+    HotelAutoCompleteResults *autocomplete = [HotelAutoCompleteResults new];
+    [autocomplete getAutoCompleteResultsForString:string withCompletionBlock:^(NSArray *airports, NSArray *cities, NSError *error) {
         if (!error) {
             if (airports.count > 0) {
                 airportsArray = airports;
@@ -56,7 +71,6 @@
             });
         }
     }];
-
 }
 
 #pragma mark - UITableViewDataSource
@@ -68,11 +82,11 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == 0) {
-        return airportsArray.count;
-
+        return citiesArray.count;
     }
     else {
-        return citiesArray.count;
+        return airportsArray.count;
+
     }
 }
 
@@ -80,15 +94,20 @@
     UITableViewCell *cell;
     cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil];
     if (indexPath.section == 0) {
-        AirAutoCompleteAirportModel *airportModel = [[AirAutoCompleteAirportModel alloc]initWithJson:[airportsArray objectAtIndex:indexPath.row]];
-        cell.textLabel.text = airportModel.airport;
-        cell.detailTextLabel.text = airportModel.city;
+//        AirAutoCompleteAirportModel *airportModel = [[AirAutoCompleteAirportModel alloc]initWithJson:[airportsArray objectAtIndex:indexPath.row]];
+//        cell.textLabel.text = airportModel.airport;
+//        cell.detailTextLabel.text = airportModel.city;
+        HotelAutoCompleteCityModel *cityModel = [[HotelAutoCompleteCityModel alloc]initWithJson:[citiesArray objectAtIndex:indexPath.row]];
+        cell.textLabel.text = cityModel.city;
 
     }
     else {
-        AirAutoCompleteCityModel *cityModel = [[AirAutoCompleteCityModel alloc]initWithJson:[citiesArray objectAtIndex:indexPath.row]];
-        cell.textLabel.text = cityModel.city;
-        cell.detailTextLabel.text = @"All Airports";
+//        AirAutoCompleteCityModel *cityModel = [[AirAutoCompleteCityModel alloc]initWithJson:[citiesArray objectAtIndex:indexPath.row]];
+       
+        HotelAutoCompleteAirportModel *airportModel = [[HotelAutoCompleteAirportModel alloc]initWithJson:[airportsArray objectAtIndex:indexPath.row]];
+        cell.textLabel.text = airportModel.airport;
+
+//        cell.detailTextLabel.text = @"All Airports";
     }
     return cell;
 }
@@ -96,10 +115,11 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     if (section == 0) {
-        return @"Airports";
+        return @"Cities";
     }
     else {
-        return @"Cities";
+        return @"Airports";
+
     }
 }
 
@@ -110,12 +130,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (indexPath.section == 0) {
-        AirAutoCompleteAirportModel *airportModel = [[AirAutoCompleteAirportModel alloc]initWithJson:[airportsArray objectAtIndex:indexPath.row]];
-        [self.delegate didSelectValue:airportModel.airport forKey:airportModel.iata withSearchType:departures?Departures:Arrivals andTravelType:Airport];
-    }
-    else {
         AirAutoCompleteCityModel *cityModel = [[AirAutoCompleteCityModel alloc]initWithJson:[citiesArray objectAtIndex:indexPath.row]];
         [self.delegate didSelectValue:cityModel.city forKey:cityModel.cityid_ppn withSearchType:departures?Departures:Arrivals andTravelType:City];
+    }
+    else {
+        AirAutoCompleteAirportModel *airportModel = [[AirAutoCompleteAirportModel alloc]initWithJson:[airportsArray objectAtIndex:indexPath.row]];
+        [self.delegate didSelectValue:airportModel.airport forKey:airportModel.iata withSearchType:departures?Departures:Arrivals andTravelType:Airport];
     }
     
     [self dismissViewControllerAnimated:YES completion:nil];

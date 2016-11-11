@@ -24,9 +24,29 @@
 		<data>
 		GaKvI+EqhbzzT38usQhon6G5eZQ=
 		</data>
+		<key>Headers/HotelAutoCompleteAirportModel.h</key>
+		<data>
+		rIdXE+9i/I2hJSWaZG0z9SAQ2Os=
+		</data>
+		<key>Headers/HotelAutoCompleteCityModel.h</key>
+		<data>
+		Qymdq+KYOlS8iB8eo+/Bi2YcEpw=
+		</data>
+		<key>Headers/HotelAutoCompleteResults.h</key>
+		<data>
+		oMe64X0RlHSQHEfsdYkCBKqlc/8=
+		</data>
+		<key>Headers/HotelSearchHotelModel.h</key>
+		<data>
+		u5ul8bKyLz4qulvKuJ74Zb6kT6c=
+		</data>
+		<key>Headers/HotelSearchResults.h</key>
+		<data>
+		C+MHLcX5L0UUyEtwGht1y9qB+j4=
+		</data>
 		<key>Headers/PPNSdk.h</key>
 		<data>
-		U9mWbutOf4DVT3jc9upAtX+l9Aw=
+		FZvianq9KxxfHgKOkNgSolkHUMU=
 		</data>
 		<key>Headers/PPNServices.h</key>
 		<data>
@@ -98,15 +118,70 @@
 			RHNbiHRATAbzGbuqrHo6MQkKWwIrJ7scHknXRNre8xA=
 			</data>
 		</dict>
+		<key>Headers/HotelAutoCompleteAirportModel.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			rIdXE+9i/I2hJSWaZG0z9SAQ2Os=
+			</data>
+			<key>hash2</key>
+			<data>
+			YvjeoCxmMCTYG+ty5Umj9WXiHOZdKDaRobzjxK4OEMw=
+			</data>
+		</dict>
+		<key>Headers/HotelAutoCompleteCityModel.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Qymdq+KYOlS8iB8eo+/Bi2YcEpw=
+			</data>
+			<key>hash2</key>
+			<data>
+			TUrG+HnHqyqoykQGlXwWCCbnxt+MiVlT4BFv5D6f+4s=
+			</data>
+		</dict>
+		<key>Headers/HotelAutoCompleteResults.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			oMe64X0RlHSQHEfsdYkCBKqlc/8=
+			</data>
+			<key>hash2</key>
+			<data>
+			jva0vhF5QridSkxytcDGt3NR8VykiYnIozlLStaQRF4=
+			</data>
+		</dict>
+		<key>Headers/HotelSearchHotelModel.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			u5ul8bKyLz4qulvKuJ74Zb6kT6c=
+			</data>
+			<key>hash2</key>
+			<data>
+			XeDviA0UxLFfyjFrN6mJc56uBW3zPYUAjsj2BEEHb/M=
+			</data>
+		</dict>
+		<key>Headers/HotelSearchResults.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			C+MHLcX5L0UUyEtwGht1y9qB+j4=
+			</data>
+			<key>hash2</key>
+			<data>
+			jF7AmxsloPsZb+SxUf72n15jFb8qW6QkzRKq5MEyXv4=
+			</data>
+		</dict>
 		<key>Headers/PPNSdk.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			U9mWbutOf4DVT3jc9upAtX+l9Aw=
+			FZvianq9KxxfHgKOkNgSolkHUMU=
 			</data>
 			<key>hash2</key>
 			<data>
-			KLJnYMnoJlTsN/2dkrX1Wnh86O9Wy3RV2GqkoQe8660=
+			MWe8e50T2HC8QdTx71UlCbyhxw4vrqgJc21LgF52FkU=
 			</data>
 		</dict>
 		<key>Headers/PPNServices.h</key>

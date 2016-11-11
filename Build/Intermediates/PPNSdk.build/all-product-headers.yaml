@@ -33,6 +33,31 @@
         },
         {
           'type': 'file',
+          'name': "HotelAutoCompleteAirportModel.h",
+          'external-contents': "/Users/sameersiddiqui/Projects/PPNSdk/PPNSdk/Hotel/AutoComplete/HotelAutoCompleteAirportModel.h"
+        },
+        {
+          'type': 'file',
+          'name': "HotelAutoCompleteCityModel.h",
+          'external-contents': "/Users/sameersiddiqui/Projects/PPNSdk/PPNSdk/Hotel/AutoComplete/HotelAutoCompleteCityModel.h"
+        },
+        {
+          'type': 'file',
+          'name': "HotelAutoCompleteResults.h",
+          'external-contents': "/Users/sameersiddiqui/Projects/PPNSdk/PPNSdk/Hotel/AutoComplete/HotelAutoCompleteResults.h"
+        },
+        {
+          'type': 'file',
+          'name': "HotelSearchHotelModel.h",
+          'external-contents': "/Users/sameersiddiqui/Projects/PPNSdk/PPNSdk/Hotel/SearchResults/HotelSearchHotelModel.h"
+        },
+        {
+          'type': 'file',
+          'name': "HotelSearchResults.h",
+          'external-contents': "/Users/sameersiddiqui/Projects/PPNSdk/PPNSdk/Hotel/SearchResults/HotelSearchResults.h"
+        },
+        {
+          'type': 'file',
           'name': "PPNSdk-Swift.h",
           'external-contents': "/Users/sameersiddiqui/Projects/PPNSdk/Build/Products/Debug-iphonesimulator/PPNSdk.framework/Headers/PPNSdk-Swift.h"
         },

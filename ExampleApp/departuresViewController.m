@@ -16,7 +16,8 @@
 
 @implementation departuresViewController {
     NSDictionary *passedDict;
-    NSArray *itins;
+//    NSArray *itins;
+    NSArray *htls;
     UIActivityIndicatorView *activity;
 }
 
@@ -42,22 +43,36 @@
 
 - (void)getData {
     
+//    NSString *origincode = [passedDict objectForKey:@"origincode"];
+//    NSString *destinationcode = [passedDict objectForKey:@"destinationcode"];
+//    NSString *departuredate = [passedDict objectForKey:@"departuredate"];
+    
     NSString *origincode = [passedDict objectForKey:@"origincode"];
-    NSString *destinationcode = [passedDict objectForKey:@"destinationcode"];
-    NSString *departuredate = [passedDict objectForKey:@"departuredate"];
+    NSString *checkindate = [passedDict objectForKey:@"checkindate"];
+    NSString *checkoutdate = [passedDict objectForKey:@"checkoutdate"];
     
     dispatch_async(dispatch_get_main_queue(), ^{
         [activity startAnimating];
     });
 
-    FlightDepartureResults *fdr = [FlightDepartureResults new];
-    [fdr getFlightDepartureResultsForNumberOfAdults:1 originCode:origincode destinationCode:destinationcode departureDate:departuredate withCompletionBlock:^(NSArray *itineraries, NSError *error) {
-        itins = itineraries;
+//    FlightDepartureResults *fdr = [FlightDepartureResults new];
+//    [fdr getFlightDepartureResultsForNumberOfAdults:1 originCode:origincode destinationCode:destinationcode departureDate:departuredate withCompletionBlock:^(NSArray *itineraries, NSError *error) {
+//        itins = itineraries;
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            [activity stopAnimating];
+//            [self.tableView reloadData];
+//        });
+//    }];
+    HotelSearchResults *results = [HotelSearchResults new];
+    [results getHotelSearchResultsWithCheckIn:checkindate checkout:checkoutdate cityid:origincode rooms:1 adults:1 children:0 withCompletionBLock:^(NSArray *hotels, NSError *error) {
+        htls = hotels;
         dispatch_async(dispatch_get_main_queue(), ^{
             [activity stopAnimating];
             [self.tableView reloadData];
         });
+        
     }];
+
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -65,15 +80,21 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return itins.count;
+    return htls.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell;
     cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil];
-    FlightDepartureItineraryModel *model = [[FlightDepartureItineraryModel alloc]initWithJson:[itins objectAtIndex:indexPath.row]];
-    cell.textLabel.text = model.airline_name;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@%.02f",model.currency_symbol,model.total_fare];
+//    FlightDepartureItineraryModel *model = [[FlightDepartureItineraryModel alloc]initWithJson:[itins objectAtIndex:indexPath.row]];
+//    cell.textLabel.text = model.airline_name;
+//    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@%.02f",model.currency_symbol,model.total_fare];
+    
+    HotelSearchHotelModel *model = [[HotelSearchHotelModel alloc]initWithJson:[htls objectAtIndex:indexPath.row]];
+    cell.textLabel.text = model.name;
+    cell.detailTextLabel.text = model.display_price;
+    
+    
     return cell;
 }
 

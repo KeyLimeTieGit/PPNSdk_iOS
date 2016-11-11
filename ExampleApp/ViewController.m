@@ -18,7 +18,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *arrivalAirportTextField;
 
 @property (weak, nonatomic) IBOutlet UITextField *departureDateTextField;
-@property (weak, nonatomic) IBOutlet UITextField *returnDateTextField;
 
 @end
 
@@ -38,13 +37,13 @@
 }
 
 -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
-    if (textField == _arrivalAirportTextField) {
-        SearchViewController *vc = [SearchViewController createForDepartures:NO];
-        [self presentViewController:vc animated:YES completion:nil];
-        vc.delegate = self;
-        return NO;
-    }
-    else if (textField == _departureAirportTextField) {
+//    if (textField == _arrivalAirportTextField) {
+//        SearchViewController *vc = [SearchViewController createForDepartures:NO];
+//        [self presentViewController:vc animated:YES completion:nil];
+//        vc.delegate = self;
+//        return NO;
+//    }
+    if (textField == _departureAirportTextField) {
         SearchViewController *vc = [SearchViewController createForDepartures:YES];
         [self presentViewController:vc animated:YES completion:nil];
         vc.delegate = self;
@@ -67,7 +66,8 @@
 }
 
 - (IBAction)searchPressed:(id)sender {
-    NSDictionary *dict = @{@"origincode":departureKey, @"destinationcode":arrivalKey, @"departuredate":_departureDateTextField.text};
+//    NSDictionary *dict = @{@"origincode":departureKey, @"destinationcode":arrivalKey, @"departuredate":_departureDateTextField.text};
+        NSDictionary *dict = @{@"origincode":departureKey, @"checkindate":_arrivalAirportTextField.text, @"checkoutdate":_departureDateTextField.text};
     departuresViewController *vc = [departuresViewController createForDepartures:YES withDictionary:dict];
     [self.navigationController pushViewController:vc animated:YES];
 }
