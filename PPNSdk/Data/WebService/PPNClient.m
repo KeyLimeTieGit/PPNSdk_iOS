@@ -97,7 +97,6 @@ const int kPPNRetryMax = 3;
     }
     request.timeoutInterval = kPPNDefaultTimeoutMS;
 //    NSLog(@"Request sent : %@",request.URL.absoluteString);
-    
     __weak typeof (self) weakSelf = self;
 
     NSURLSessionTask *task = [session dataTaskWithRequest:request completionHandler: ^(NSData *data, NSURLResponse *httpResponse, NSError *error) {

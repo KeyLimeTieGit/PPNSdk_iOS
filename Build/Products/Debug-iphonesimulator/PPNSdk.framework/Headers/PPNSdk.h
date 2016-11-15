@@ -30,6 +30,9 @@ FOUNDATION_EXPORT const unsigned char PPNSdkVersionString[];
 #import <PPNSdk/HotelDetailResults.h>
 #import <PPNSdk/HotelDetailModel.h>
 #import <PPNSdk/HotelRatesResults.h>
+#import <PPNSdk/HotelRatesModel.h>
+#import <PPNSdk/HotelContractResults.h>
+#import <PPNSdk/HotelContractModel.h>
 
 
 

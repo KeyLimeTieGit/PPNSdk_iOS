@@ -68,6 +68,21 @@
 		9C2DC5901DDB6FF900933515 /* HotelRatesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2DC58F1DDB6FF900933515 /* HotelRatesViewController.m */; };
 		9C2DC5931DDB759100933515 /* HotelRatesParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C2DC5911DDB759100933515 /* HotelRatesParser.h */; };
 		9C2DC5941DDB759100933515 /* HotelRatesParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2DC5921DDB759100933515 /* HotelRatesParser.m */; };
+		9C2DC5971DDB79FA00933515 /* HotelRatesModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C2DC5951DDB79FA00933515 /* HotelRatesModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C2DC5981DDB79FA00933515 /* HotelRatesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2DC5961DDB79FA00933515 /* HotelRatesModel.m */; };
+		9C2DC59B1DDB7BDE00933515 /* HotelRatesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2DC59A1DDB7BDE00933515 /* HotelRatesTableViewCell.m */; };
+		9C2DC5A01DDB998A00933515 /* HotelContractResults.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C2DC59E1DDB998A00933515 /* HotelContractResults.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C2DC5A11DDB998A00933515 /* HotelContractResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2DC59F1DDB998A00933515 /* HotelContractResults.m */; };
+		9C2DC5A41DDB9A9200933515 /* HotelContractViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2DC5A31DDB9A9200933515 /* HotelContractViewController.m */; };
+		9C2DC5A71DDB9BCC00933515 /* HotelContractParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C2DC5A51DDB9BCC00933515 /* HotelContractParser.h */; };
+		9C2DC5A81DDB9BCC00933515 /* HotelContractParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2DC5A61DDB9BCC00933515 /* HotelContractParser.m */; };
+		9C2DC5AB1DDBA10000933515 /* HotelContractModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C2DC5A91DDBA10000933515 /* HotelContractModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C2DC5AC1DDBA10000933515 /* HotelContractModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2DC5AA1DDBA10000933515 /* HotelContractModel.m */; };
+		9C2DC5B81DDBAC4400933515 /* DAYCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2DC5AF1DDBAC4400933515 /* DAYCalendarView.m */; };
+		9C2DC5B91DDBAC4400933515 /* DAYComponentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2DC5B11DDBAC4400933515 /* DAYComponentView.m */; };
+		9C2DC5BA1DDBAC4400933515 /* DAYIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2DC5B31DDBAC4400933515 /* DAYIndicatorView.m */; };
+		9C2DC5BB1DDBAC4400933515 /* DAYNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2DC5B51DDBAC4400933515 /* DAYNavigationBar.m */; };
+		9C2DC5BC1DDBAC4400933515 /* DAYUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2DC5B71DDBAC4400933515 /* DAYUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,6 +179,28 @@
 		9C2DC58F1DDB6FF900933515 /* HotelRatesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelRatesViewController.m; sourceTree = "<group>"; };
 		9C2DC5911DDB759100933515 /* HotelRatesParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotelRatesParser.h; sourceTree = "<group>"; };
 		9C2DC5921DDB759100933515 /* HotelRatesParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelRatesParser.m; sourceTree = "<group>"; };
+		9C2DC5951DDB79FA00933515 /* HotelRatesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotelRatesModel.h; sourceTree = "<group>"; };
+		9C2DC5961DDB79FA00933515 /* HotelRatesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelRatesModel.m; sourceTree = "<group>"; };
+		9C2DC5991DDB7BDE00933515 /* HotelRatesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotelRatesTableViewCell.h; sourceTree = "<group>"; };
+		9C2DC59A1DDB7BDE00933515 /* HotelRatesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelRatesTableViewCell.m; sourceTree = "<group>"; };
+		9C2DC59E1DDB998A00933515 /* HotelContractResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotelContractResults.h; sourceTree = "<group>"; };
+		9C2DC59F1DDB998A00933515 /* HotelContractResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelContractResults.m; sourceTree = "<group>"; };
+		9C2DC5A21DDB9A9200933515 /* HotelContractViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotelContractViewController.h; sourceTree = "<group>"; };
+		9C2DC5A31DDB9A9200933515 /* HotelContractViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelContractViewController.m; sourceTree = "<group>"; };
+		9C2DC5A51DDB9BCC00933515 /* HotelContractParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotelContractParser.h; sourceTree = "<group>"; };
+		9C2DC5A61DDB9BCC00933515 /* HotelContractParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelContractParser.m; sourceTree = "<group>"; };
+		9C2DC5A91DDBA10000933515 /* HotelContractModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotelContractModel.h; sourceTree = "<group>"; };
+		9C2DC5AA1DDBA10000933515 /* HotelContractModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelContractModel.m; sourceTree = "<group>"; };
+		9C2DC5AE1DDBAC4400933515 /* DAYCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAYCalendarView.h; sourceTree = "<group>"; };
+		9C2DC5AF1DDBAC4400933515 /* DAYCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAYCalendarView.m; sourceTree = "<group>"; };
+		9C2DC5B01DDBAC4400933515 /* DAYComponentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAYComponentView.h; sourceTree = "<group>"; };
+		9C2DC5B11DDBAC4400933515 /* DAYComponentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAYComponentView.m; sourceTree = "<group>"; };
+		9C2DC5B21DDBAC4400933515 /* DAYIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAYIndicatorView.h; sourceTree = "<group>"; };
+		9C2DC5B31DDBAC4400933515 /* DAYIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAYIndicatorView.m; sourceTree = "<group>"; };
+		9C2DC5B41DDBAC4400933515 /* DAYNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAYNavigationBar.h; sourceTree = "<group>"; };
+		9C2DC5B51DDBAC4400933515 /* DAYNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAYNavigationBar.m; sourceTree = "<group>"; };
+		9C2DC5B61DDBAC4400933515 /* DAYUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAYUtils.h; sourceTree = "<group>"; };
+		9C2DC5B71DDBAC4400933515 /* DAYUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAYUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +258,7 @@
 		9C2DC5031DD23F1400933515 /* ExampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				9C2DC5AD1DDBAC3500933515 /* Calendar */,
 				9C2DC5071DD23F1400933515 /* AppDelegate.h */,
 				9C2DC5081DD23F1400933515 /* AppDelegate.m */,
 				9C2DC50A1DD23F1400933515 /* ViewController.h */,
@@ -233,6 +271,10 @@
 				9C2DC57F1DD65F6400933515 /* HotelDetailViewController.m */,
 				9C2DC58E1DDB6FF900933515 /* HotelRatesViewController.h */,
 				9C2DC58F1DDB6FF900933515 /* HotelRatesViewController.m */,
+				9C2DC5991DDB7BDE00933515 /* HotelRatesTableViewCell.h */,
+				9C2DC59A1DDB7BDE00933515 /* HotelRatesTableViewCell.m */,
+				9C2DC5A21DDB9A9200933515 /* HotelContractViewController.h */,
+				9C2DC5A31DDB9A9200933515 /* HotelContractViewController.m */,
 				9C2DC50D1DD23F1400933515 /* Main.storyboard */,
 				9C2DC5101DD23F1400933515 /* Assets.xcassets */,
 				9C2DC5121DD23F1400933515 /* LaunchScreen.storyboard */,
@@ -320,6 +362,7 @@
 		9C2DC55A1DD4E32300933515 /* Hotel */ = {
 			isa = PBXGroup;
 			children = (
+				9C2DC59C1DDB994000933515 /* Contract */,
 				9C2DC5891DDA400000933515 /* Rates */,
 				9C2DC5791DD65CC300933515 /* Details */,
 				9C2DC56C1DD52C7200933515 /* SearchResults */,
@@ -376,8 +419,40 @@
 				9C2DC58B1DDA402800933515 /* HotelRatesResults.m */,
 				9C2DC5911DDB759100933515 /* HotelRatesParser.h */,
 				9C2DC5921DDB759100933515 /* HotelRatesParser.m */,
+				9C2DC5951DDB79FA00933515 /* HotelRatesModel.h */,
+				9C2DC5961DDB79FA00933515 /* HotelRatesModel.m */,
 			);
 			path = Rates;
+			sourceTree = "<group>";
+		};
+		9C2DC59C1DDB994000933515 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				9C2DC59E1DDB998A00933515 /* HotelContractResults.h */,
+				9C2DC59F1DDB998A00933515 /* HotelContractResults.m */,
+				9C2DC5A51DDB9BCC00933515 /* HotelContractParser.h */,
+				9C2DC5A61DDB9BCC00933515 /* HotelContractParser.m */,
+				9C2DC5A91DDBA10000933515 /* HotelContractModel.h */,
+				9C2DC5AA1DDBA10000933515 /* HotelContractModel.m */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		9C2DC5AD1DDBAC3500933515 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				9C2DC5AE1DDBAC4400933515 /* DAYCalendarView.h */,
+				9C2DC5AF1DDBAC4400933515 /* DAYCalendarView.m */,
+				9C2DC5B01DDBAC4400933515 /* DAYComponentView.h */,
+				9C2DC5B11DDBAC4400933515 /* DAYComponentView.m */,
+				9C2DC5B21DDBAC4400933515 /* DAYIndicatorView.h */,
+				9C2DC5B31DDBAC4400933515 /* DAYIndicatorView.m */,
+				9C2DC5B41DDBAC4400933515 /* DAYNavigationBar.h */,
+				9C2DC5B51DDBAC4400933515 /* DAYNavigationBar.m */,
+				9C2DC5B61DDBAC4400933515 /* DAYUtils.h */,
+				9C2DC5B71DDBAC4400933515 /* DAYUtils.m */,
+			);
+			name = Calendar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -401,6 +476,9 @@
 				9C2DC5771DD531D700933515 /* HotelSearchHotelModel.h in Headers */,
 				9C2DC5871DD66B7700933515 /* HotelDetailModel.h in Headers */,
 				9C2DC55E1DD4E37200933515 /* HotelAutoCompleteResults.h in Headers */,
+				9C2DC5971DDB79FA00933515 /* HotelRatesModel.h in Headers */,
+				9C2DC5AB1DDBA10000933515 /* HotelContractModel.h in Headers */,
+				9C2DC5A01DDB998A00933515 /* HotelContractResults.h in Headers */,
 				9C2DC58C1DDA402800933515 /* HotelRatesResults.h in Headers */,
 				9C2DC57C1DD65CDD00933515 /* HotelDetailResults.h in Headers */,
 				9C2DC56F1DD52C9000933515 /* HotelSearchResults.h in Headers */,
@@ -411,6 +489,7 @@
 				9C2DC5211DD23FDC00933515 /* AirAutoCompleteParser.h in Headers */,
 				9C2DC5291DD23FEB00933515 /* PPNClient.h in Headers */,
 				9C2DC5301DD2403300933515 /* SSOrderedDictionary.h in Headers */,
+				9C2DC5A71DDB9BCC00933515 /* HotelContractParser.h in Headers */,
 				9C2DC4F81DD23F0500933515 /* PPNSdk.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,8 +599,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C2DC5981DDB79FA00933515 /* HotelRatesModel.m in Sources */,
 				9C2DC5491DD274C400933515 /* AirAutoCompleteCityModel.m in Sources */,
 				9C2DC5631DD4E72C00933515 /* HotelAutoCompleteParser.m in Sources */,
+				9C2DC5A11DDB998A00933515 /* HotelContractResults.m in Sources */,
 				9C2DC5671DD5203100933515 /* HotelAutoCompleteAirportModel.m in Sources */,
 				9C2DC55F1DD4E37200933515 /* HotelAutoCompleteResults.m in Sources */,
 				9C2DC53E1DD2439600933515 /* PPNInternalManager.m in Sources */,
@@ -529,6 +610,7 @@
 				9C2DC5701DD52C9000933515 /* HotelSearchResults.m in Sources */,
 				9C2DC5841DD668B000933515 /* HotelDetailParser.m in Sources */,
 				9C2DC5451DD2727200933515 /* AirAutoCompleteAirportModel.m in Sources */,
+				9C2DC5A81DDB9BCC00933515 /* HotelContractParser.m in Sources */,
 				9C2DC5221DD23FDC00933515 /* AirAutoCompleteParser.m in Sources */,
 				9C2DC57D1DD65CDD00933515 /* HotelDetailResults.m in Sources */,
 				9C2DC5561DD2874600933515 /* FlightDepartureItineraryModel.m in Sources */,
@@ -543,6 +625,7 @@
 				9C2DC58D1DDA402800933515 /* HotelRatesResults.m in Sources */,
 				9C2DC5311DD2403300933515 /* SSOrderedDictionary.m in Sources */,
 				9C2DC56B1DD5234D00933515 /* HotelAutoCompleteCityModel.m in Sources */,
+				9C2DC5AC1DDBA10000933515 /* HotelContractModel.m in Sources */,
 				9C2DC5741DD52F6F00933515 /* HotelSearchParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -551,13 +634,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C2DC5A41DDB9A9200933515 /* HotelContractViewController.m in Sources */,
 				9C2DC50C1DD23F1400933515 /* ViewController.m in Sources */,
 				9C2DC5901DDB6FF900933515 /* HotelRatesViewController.m in Sources */,
+				9C2DC59B1DDB7BDE00933515 /* HotelRatesTableViewCell.m in Sources */,
 				9C2DC5591DD3B61E00933515 /* ListViewController.m in Sources */,
+				9C2DC5B91DDBAC4400933515 /* DAYComponentView.m in Sources */,
 				9C2DC5091DD23F1400933515 /* AppDelegate.m in Sources */,
+				9C2DC5BA1DDBAC4400933515 /* DAYIndicatorView.m in Sources */,
 				9C2DC5411DD25C8A00933515 /* SearchViewController.m in Sources */,
 				9C2DC5801DD65F6400933515 /* HotelDetailViewController.m in Sources */,
+				9C2DC5BC1DDBAC4400933515 /* DAYUtils.m in Sources */,
 				9C2DC5061DD23F1400933515 /* main.m in Sources */,
+				9C2DC5BB1DDBAC4400933515 /* DAYNavigationBar.m in Sources */,
+				9C2DC5B81DDBAC4400933515 /* DAYCalendarView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -698,6 +788,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = PPNSdk/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.keylimetie.PPNSdk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -716,6 +807,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = PPNSdk/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.keylimetie.PPNSdk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -729,6 +821,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = H72Y3J4J5V;
 				INFOPLIST_FILE = ExampleApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.keylimetie.ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -741,6 +834,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = H72Y3J4J5V;
 				INFOPLIST_FILE = ExampleApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.keylimetie.ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";

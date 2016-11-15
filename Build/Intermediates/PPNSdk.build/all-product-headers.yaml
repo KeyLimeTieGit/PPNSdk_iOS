@@ -4,7 +4,7 @@
   'roots': [
     {
       'type': 'directory',
-      'name': "/Users/sameersiddiqui/Projects/PPNSdk/Build/Products/Debug-iphonesimulator/PPNSdk.framework/Headers",
+      'name': "/Users/sameersiddiqui/Projects/PPNSdk/Build/Products/Debug-iphoneos/PPNSdk.framework/Headers",
       'contents': [
         {
           'type': 'file',
@@ -48,6 +48,16 @@
         },
         {
           'type': 'file',
+          'name': "HotelContractModel.h",
+          'external-contents': "/Users/sameersiddiqui/Projects/PPNSdk/PPNSdk/Hotel/Contract/HotelContractModel.h"
+        },
+        {
+          'type': 'file',
+          'name': "HotelContractResults.h",
+          'external-contents': "/Users/sameersiddiqui/Projects/PPNSdk/PPNSdk/Hotel/Contract/HotelContractResults.h"
+        },
+        {
+          'type': 'file',
           'name': "HotelDetailModel.h",
           'external-contents': "/Users/sameersiddiqui/Projects/PPNSdk/PPNSdk/Hotel/Details/HotelDetailModel.h"
         },
@@ -55,6 +65,11 @@
           'type': 'file',
           'name': "HotelDetailResults.h",
           'external-contents': "/Users/sameersiddiqui/Projects/PPNSdk/PPNSdk/Hotel/Details/HotelDetailResults.h"
+        },
+        {
+          'type': 'file',
+          'name': "HotelRatesModel.h",
+          'external-contents': "/Users/sameersiddiqui/Projects/PPNSdk/PPNSdk/Hotel/Rates/HotelRatesModel.h"
         },
         {
           'type': 'file',
@@ -74,7 +89,7 @@
         {
           'type': 'file',
           'name': "PPNSdk-Swift.h",
-          'external-contents': "/Users/sameersiddiqui/Projects/PPNSdk/Build/Products/Debug-iphonesimulator/PPNSdk.framework/Headers/PPNSdk-Swift.h"
+          'external-contents': "/Users/sameersiddiqui/Projects/PPNSdk/Build/Products/Debug-iphoneos/PPNSdk.framework/Headers/PPNSdk-Swift.h"
         },
         {
           'type': 'file',
@@ -90,12 +105,12 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/sameersiddiqui/Projects/PPNSdk/Build/Products/Debug-iphonesimulator/PPNSdk.framework/Modules",
+      'name': "/Users/sameersiddiqui/Projects/PPNSdk/Build/Products/Debug-iphoneos/PPNSdk.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/sameersiddiqui/Projects/PPNSdk/Build/Intermediates/PPNSdk.build/Debug-iphonesimulator/PPNSdk.build/module.modulemap"
+          'external-contents': "/Users/sameersiddiqui/Projects/PPNSdk/Build/Intermediates/PPNSdk.build/Debug-iphoneos/PPNSdk.build/module.modulemap"
         }
       ]
     }

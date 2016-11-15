@@ -7,15 +7,22 @@
 //
 
 #import "HotelRatesViewController.h"
+#import "HotelRatesTableViewCell.h"
+#import "HotelContractViewController.h"
+
 @import PPNSdk;
 
-@interface HotelRatesViewController ()
+@interface HotelRatesViewController () <UITableViewDataSource, UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
 @implementation HotelRatesViewController {
     NSString *hotelid;
     NSDictionary *passedDict;
+    NSArray *ratesArr;
+    UIActivityIndicatorView *activity;
+
 }
 
 + (HotelRatesViewController *)createwithHotelID:(NSString *)hotelID andPassedDictionary:(NSDictionary *)dict{
@@ -30,6 +37,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    activity = [[UIActivityIndicatorView alloc]init];
+    activity.center = self.view.center;
+    [self.view insertSubview:activity aboveSubview:self.tableView];
+    [activity setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleGray];
+    [activity hidesWhenStopped];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [activity startAnimating];
+    });
     
     NSLog(@"%@",passedDict);
     NSString *checkinDate = [passedDict objectForKey:@"checkindate"];
@@ -44,8 +60,12 @@
     
     HotelRatesResults *results = [HotelRatesResults new];
     [results getHotelRatesForHotelID:hotelid rooms:@"1" adults:@"1" children:@"0" checkin:newcheckin checkout:newcheckout withCompletionBlock:^(NSArray *rates, NSError *error) {
-       
-        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            ratesArr = rates;
+            [self.tableView reloadData];
+            [activity stopAnimating];
+        });
+
     }];
     
     
@@ -56,14 +76,32 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return ratesArr.count;
 }
-*/
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewAutomaticDimension;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewAutomaticDimension;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    HotelRatesModel *model = [[HotelRatesModel alloc]initWithJson:[ratesArr objectAtIndex:indexPath.row]];
+    HotelRatesTableViewCell *cell = (HotelRatesTableViewCell *)[self.tableView dequeueReusableCellWithIdentifier:@"ratescell"];
+    cell.titleLabel.text = model.title;
+    cell.promoLablel.text = ![model.promo isKindOfClass:[NSNull class]] ? model.promo : @"";
+    cell.priceLabel.text = [NSString stringWithFormat:@"Total Price = $%.02f", model.display_total];
+    cell.policyLabel.text = model.book_policy;
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    HotelRatesModel *model = [[HotelRatesModel alloc]initWithJson:[ratesArr objectAtIndex:indexPath.row]];
+    HotelContractViewController *vc = [HotelContractViewController createwithBundle:model.ppn_bundle];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 @end

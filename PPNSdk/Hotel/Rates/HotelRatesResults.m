@@ -8,7 +8,6 @@
 
 #import "HotelRatesResults.h"
 #import "HotelRatesParser.h"
-
 #import "PPNWebService.h"
 
 NSString *const kHotelRatesServiceName = @"hotel/getRates.Live.Multi";

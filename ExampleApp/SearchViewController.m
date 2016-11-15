@@ -23,6 +23,8 @@
     NSArray *citiesArray;
     NSArray *airportsArray;
     BOOL departures;
+    UIActivityIndicatorView *activity;
+
 }
 
 + (SearchViewController *)createForDepartures:(BOOL)departures {
@@ -39,7 +41,14 @@
     self.searchBar.showsCancelButton = YES;
     self.searchBar.placeholder = @"Departure City or Airport";
     [self.searchBar becomeFirstResponder];
-}
+    activity = [[UIActivityIndicatorView alloc]init];
+    activity.center = self.view.center;
+    [self.view addSubview:activity];
+    [activity setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleGray];
+    [activity hidesWhenStopped];
+    
+   }
+HotelAutoCompleteResults *autocomplete;
 
 - (void)getDataForString:(NSString *)string {
 //    AirAutoCompleteResults *autoComplete = [AirAutoCompleteResults new];
@@ -56,8 +65,15 @@
 //            });
 //        }
 //    }];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [activity startAnimating];
+    });
     
-    HotelAutoCompleteResults *autocomplete = [HotelAutoCompleteResults new];
+
+    if (!autocomplete || autocomplete == nil) {
+        autocomplete = [HotelAutoCompleteResults new];
+    }
+    
     [autocomplete getAutoCompleteResultsForString:string withCompletionBlock:^(NSArray *airports, NSArray *cities, NSError *error) {
         if (!error) {
             if (airports.count > 0) {
@@ -68,6 +84,7 @@
             }
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.tableView reloadData];
+                [activity stopAnimating];
             });
         }
     }];
@@ -77,7 +94,7 @@
 
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -93,7 +110,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell;
     cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil];
-    if (indexPath.section == 0) {
+    if ((int)[indexPath section] == 0) {
 //        AirAutoCompleteAirportModel *airportModel = [[AirAutoCompleteAirportModel alloc]initWithJson:[airportsArray objectAtIndex:indexPath.row]];
 //        cell.textLabel.text = airportModel.airport;
 //        cell.detailTextLabel.text = airportModel.city;
