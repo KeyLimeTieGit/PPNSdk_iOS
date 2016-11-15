@@ -2,8 +2,11 @@ dependencies: \
   /Users/sameersiddiqui/Projects/PPNSdk/ExampleApp/ViewController.m \
   /Users/sameersiddiqui/Projects/PPNSdk/ExampleApp/ViewController.h \
   /Users/sameersiddiqui/Projects/PPNSdk/ExampleApp/SearchViewController.h \
-  /Users/sameersiddiqui/Projects/PPNSdk/ExampleApp/departuresViewController.h \
+  /Users/sameersiddiqui/Projects/PPNSdk/ExampleApp/ListViewController.h \
   /Users/sameersiddiqui/Projects/PPNSdk/Build/Intermediates/PPNSdk.build/Debug-iphonesimulator/PPNSdk.build/module.modulemap \
+  /Users/sameersiddiqui/Projects/PPNSdk/PPNSdk/Hotel/Rates/HotelRatesResults.h \
+  /Users/sameersiddiqui/Projects/PPNSdk/PPNSdk/Hotel/Details/HotelDetailModel.h \
+  /Users/sameersiddiqui/Projects/PPNSdk/PPNSdk/Hotel/Details/HotelDetailResults.h \
   /Users/sameersiddiqui/Projects/PPNSdk/PPNSdk/Hotel/SearchResults/HotelSearchHotelModel.h \
   /Users/sameersiddiqui/Projects/PPNSdk/PPNSdk/Hotel/SearchResults/HotelSearchResults.h \
   /Users/sameersiddiqui/Projects/PPNSdk/PPNSdk/Hotel/AutoComplete/HotelAutoCompleteCityModel.h \

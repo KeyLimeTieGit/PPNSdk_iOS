@@ -18,7 +18,7 @@ NSString *const kHotelSearchServiceName = @"hotel/getResults";
 - (void)getHotelSearchResultsWithCheckIn:(NSString *)checkin checkout:(NSString *)checkout cityid:(NSString *)cityid rooms:(int)rooms adults:(int)adults children:(int)children withCompletionBLock:(HotelSearchCompletionBlock)completionBlock {
     
     PPNWebService *service = [[PPNWebService alloc]init];
-    [service getResponseForService:kHotelSearchServiceName withDictionary:@{@"check_in":checkin,@"check_out":checkout, @"city_id":cityid, @"rooms":@(rooms), @"adults":@(adults), @"children":@(children)} withCompletionBlock:^(id responseData, NSError *error) {
+    [service getResponseForService:kHotelSearchServiceName withDictionary:@{@"check_in":checkin,@"check_out":checkout, @"city_id":cityid, @"rooms":@(rooms), @"adults":@(adults), @"children":@(children), @"sort_by":@"lowest_price", @"order":@"desc"} withCompletionBlock:^(id responseData, NSError *error) {
         
         if (!error) {
             HotelSearchParser *parser = [[HotelSearchParser alloc]initWithJson:responseData];

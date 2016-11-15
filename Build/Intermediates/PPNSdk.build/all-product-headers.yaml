@@ -48,6 +48,21 @@
         },
         {
           'type': 'file',
+          'name': "HotelDetailModel.h",
+          'external-contents': "/Users/sameersiddiqui/Projects/PPNSdk/PPNSdk/Hotel/Details/HotelDetailModel.h"
+        },
+        {
+          'type': 'file',
+          'name': "HotelDetailResults.h",
+          'external-contents': "/Users/sameersiddiqui/Projects/PPNSdk/PPNSdk/Hotel/Details/HotelDetailResults.h"
+        },
+        {
+          'type': 'file',
+          'name': "HotelRatesResults.h",
+          'external-contents': "/Users/sameersiddiqui/Projects/PPNSdk/PPNSdk/Hotel/Rates/HotelRatesResults.h"
+        },
+        {
+          'type': 'file',
           'name': "HotelSearchHotelModel.h",
           'external-contents': "/Users/sameersiddiqui/Projects/PPNSdk/PPNSdk/Hotel/SearchResults/HotelSearchHotelModel.h"
         },

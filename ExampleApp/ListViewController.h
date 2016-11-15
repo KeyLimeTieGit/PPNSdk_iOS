@@ -8,6 +8,6 @@
 
 #import "ViewController.h"
 
-@interface departuresViewController : ViewController
-+ (departuresViewController *)createForDepartures:(BOOL)departures withDictionary:(NSDictionary *)travelDict;
+@interface ListViewController : ViewController
++ (ListViewController *)createForDepartures:(BOOL)departures withDictionary:(NSDictionary *)travelDict;
 @end

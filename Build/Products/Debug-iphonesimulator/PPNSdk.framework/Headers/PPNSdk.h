@@ -27,7 +27,9 @@ FOUNDATION_EXPORT const unsigned char PPNSdkVersionString[];
 #import <PPNSdk/HotelAutoCompleteCityModel.h>
 #import <PPNSdk/HotelSearchResults.h>
 #import <PPNSdk/HotelSearchHotelModel.h>
-
+#import <PPNSdk/HotelDetailResults.h>
+#import <PPNSdk/HotelDetailModel.h>
+#import <PPNSdk/HotelRatesResults.h>
 
 
 

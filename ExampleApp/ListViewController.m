@@ -6,24 +6,25 @@
 //  Copyright © 2016 KeyLimeTie. All rights reserved.
 //
 
-#import "departuresViewController.h"
+#import "ListViewController.h"
+#import "HotelDetailViewController.h"
+
 @import PPNSdk;
 
-@interface departuresViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface ListViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
-@implementation departuresViewController {
+@implementation ListViewController {
     NSDictionary *passedDict;
-//    NSArray *itins;
     NSArray *htls;
     UIActivityIndicatorView *activity;
 }
 
-+ (departuresViewController *)createForDepartures:(BOOL)departures withDictionary:(NSDictionary *)travelDict{
++ (ListViewController *)createForDepartures:(BOOL)departures withDictionary:(NSDictionary *)travelDict{
     NSBundle *frameworkBundle = [NSBundle bundleForClass:[self class]];
-    departuresViewController *main = [[UIStoryboard storyboardWithName:@"Main" bundle:frameworkBundle] instantiateViewControllerWithIdentifier:NSStringFromClass([departuresViewController class])];
+    ListViewController *main = [[UIStoryboard storyboardWithName:@"Main" bundle:frameworkBundle] instantiateViewControllerWithIdentifier:NSStringFromClass([ListViewController class])];
     main->passedDict = travelDict;
     return main;
 }
@@ -43,9 +44,6 @@
 
 - (void)getData {
     
-//    NSString *origincode = [passedDict objectForKey:@"origincode"];
-//    NSString *destinationcode = [passedDict objectForKey:@"destinationcode"];
-//    NSString *departuredate = [passedDict objectForKey:@"departuredate"];
     
     NSString *origincode = [passedDict objectForKey:@"origincode"];
     NSString *checkindate = [passedDict objectForKey:@"checkindate"];
@@ -55,14 +53,6 @@
         [activity startAnimating];
     });
 
-//    FlightDepartureResults *fdr = [FlightDepartureResults new];
-//    [fdr getFlightDepartureResultsForNumberOfAdults:1 originCode:origincode destinationCode:destinationcode departureDate:departuredate withCompletionBlock:^(NSArray *itineraries, NSError *error) {
-//        itins = itineraries;
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            [activity stopAnimating];
-//            [self.tableView reloadData];
-//        });
-//    }];
     HotelSearchResults *results = [HotelSearchResults new];
     [results getHotelSearchResultsWithCheckIn:checkindate checkout:checkoutdate cityid:origincode rooms:1 adults:1 children:0 withCompletionBLock:^(NSArray *hotels, NSError *error) {
         htls = hotels;
@@ -70,9 +60,7 @@
             [activity stopAnimating];
             [self.tableView reloadData];
         });
-        
     }];
-
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -86,16 +74,20 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell;
     cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil];
-//    FlightDepartureItineraryModel *model = [[FlightDepartureItineraryModel alloc]initWithJson:[itins objectAtIndex:indexPath.row]];
-//    cell.textLabel.text = model.airline_name;
-//    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@%.02f",model.currency_symbol,model.total_fare];
+
     
     HotelSearchHotelModel *model = [[HotelSearchHotelModel alloc]initWithJson:[htls objectAtIndex:indexPath.row]];
     cell.textLabel.text = model.name;
     cell.detailTextLabel.text = model.display_price;
     
-    
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    HotelSearchHotelModel *model = [[HotelSearchHotelModel alloc]initWithJson:[htls objectAtIndex:indexPath.row]];
+    HotelDetailViewController *vc = [HotelDetailViewController createwithHotelID:model.hotel_id];
+    vc.passedDict = passedDict;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 

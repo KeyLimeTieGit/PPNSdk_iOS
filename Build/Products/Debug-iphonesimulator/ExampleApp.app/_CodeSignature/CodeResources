@@ -18,31 +18,47 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<data>
-		8vL2TQ+t/fCDkdDjdocy35331Iw=
+		Pb+VDFWHTCM1e5p2xt/rwSxP2Sk=
+		</data>
+		<key>Base.lproj/Main.storyboardc/HotelDetailViewController.nib</key>
+		<data>
+		iRgilXFynwmTELOLLh+r4W/c+Fk=
+		</data>
+		<key>Base.lproj/Main.storyboardc/HotelRatesViewController.nib</key>
+		<data>
+		eGmaVeXeex4FSHyWFIAfjpq05XU=
 		</data>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
-		o0apxYT4LmFW8GwJim+tR8wu/gk=
+		m+j/Q+wiltpictOvoCkjpTaV/PU=
+		</data>
+		<key>Base.lproj/Main.storyboardc/J6V-5D-q5b-view-h6K-EW-DSz.nib</key>
+		<data>
+		Md8QCUxG+1Pm3xM/Vb/pXORetB8=
+		</data>
+		<key>Base.lproj/Main.storyboardc/ListViewController.nib</key>
+		<data>
+		B6B8hfHj+fR4p4fdnTsW/tVfe3M=
 		</data>
 		<key>Base.lproj/Main.storyboardc/SearchViewController.nib</key>
 		<data>
-		82b6tDSyLaJtAa1NLUAH+asH8Qk=
+		iK8IMVqzMHnkUdF6J5xfa/RMudw=
 		</data>
 		<key>Base.lproj/Main.storyboardc/UINavigationController-0Tx-JE-O27.nib</key>
 		<data>
-		Sea6djiBMqV8te0LuzDn/t2kXIM=
+		VU2XAL5EmGaExyD/UE2YCevOBMk=
 		</data>
-		<key>Base.lproj/Main.storyboardc/departuresViewController.nib</key>
+		<key>Base.lproj/Main.storyboardc/cdX-Ss-1XX-view-czb-vT-LD9.nib</key>
 		<data>
-		4N5mpUxHWDqyx9/IubM3b9cJsHA=
+		gsDM3XLdkJqRqrwolkze0AElfvM=
 		</data>
 		<key>Base.lproj/Main.storyboardc/enK-eW-HM8-view-RVL-CI-xOm.nib</key>
 		<data>
-		wfmlDg4PeZ1ryEKDtSCamTEI/9g=
+		uFuxJoPdA4t4kzbFzz01qx22Hjc=
 		</data>
 		<key>Base.lproj/Main.storyboardc/pyI-CF-Enk-view-vpg-am-MMh.nib</key>
 		<data>
-		4I6RDLLXE1/7nvI6d/MiPzkbO58=
+		HUbAOkOH6wlWVP3Os0EjFcn7kpU=
 		</data>
 		<key>Frameworks/PPNSdk.framework/Info.plist</key>
 		<data>
@@ -50,7 +66,7 @@
 		</data>
 		<key>Frameworks/PPNSdk.framework/PPNSdk</key>
 		<data>
-		0gHAjaxM+J9nmgvXLDD4tjjH48k=
+		fm2MpNDTwIOXNfQ6KSMJPKRrBD4=
 		</data>
 		<key>Frameworks/PPNSdk.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -104,77 +120,121 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8vL2TQ+t/fCDkdDjdocy35331Iw=
+			Pb+VDFWHTCM1e5p2xt/rwSxP2Sk=
 			</data>
 			<key>hash2</key>
 			<data>
-			1+3F3OqCuvkJac9RQRw13QRW8eul78hGHmB9soiDbss=
+			ibqxodMCqlhVUmMN4y4qwVaHLah6cz1weAXAaRnpP/U=
+			</data>
+		</dict>
+		<key>Base.lproj/Main.storyboardc/HotelDetailViewController.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			iRgilXFynwmTELOLLh+r4W/c+Fk=
+			</data>
+			<key>hash2</key>
+			<data>
+			QaT9XNVYRtJoYQNWyTIruEjGiuv3eJf64GB7Zp5Ko18=
+			</data>
+		</dict>
+		<key>Base.lproj/Main.storyboardc/HotelRatesViewController.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			eGmaVeXeex4FSHyWFIAfjpq05XU=
+			</data>
+			<key>hash2</key>
+			<data>
+			ozCbl7Mv7vzMoC221nJ7R0FpEsnVWflwTZsDAjBSCc0=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			o0apxYT4LmFW8GwJim+tR8wu/gk=
+			m+j/Q+wiltpictOvoCkjpTaV/PU=
 			</data>
 			<key>hash2</key>
 			<data>
-			PPfIjUujVFCbj8YXiBuYMQjFuuovSUxdHKzgc9O4WrU=
+			UpnUkAjMc28iurGFg0pZX0wWAE2irQhRuMkLN1917x8=
+			</data>
+		</dict>
+		<key>Base.lproj/Main.storyboardc/J6V-5D-q5b-view-h6K-EW-DSz.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Md8QCUxG+1Pm3xM/Vb/pXORetB8=
+			</data>
+			<key>hash2</key>
+			<data>
+			rgUHYabXDTXyICJKmIkLn7i95iN9hqjtJ5lLnHbiB7o=
+			</data>
+		</dict>
+		<key>Base.lproj/Main.storyboardc/ListViewController.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			B6B8hfHj+fR4p4fdnTsW/tVfe3M=
+			</data>
+			<key>hash2</key>
+			<data>
+			Q0caLIoy59FzgTFc1auJXRiPoG/U9WgXpvXeZRq+6hg=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/SearchViewController.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			82b6tDSyLaJtAa1NLUAH+asH8Qk=
+			iK8IMVqzMHnkUdF6J5xfa/RMudw=
 			</data>
 			<key>hash2</key>
 			<data>
-			kdckE2UlcWbviJV0RwPKZA7RSGcTa85jZGSKt6TkMuc=
+			hn03evyLv+D2+a7skQoC1AKjIDtp+pwp94rOk58uMeU=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/UINavigationController-0Tx-JE-O27.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Sea6djiBMqV8te0LuzDn/t2kXIM=
+			VU2XAL5EmGaExyD/UE2YCevOBMk=
 			</data>
 			<key>hash2</key>
 			<data>
-			cjzcLyXMXPfMRdq7SSHET9qISkeEUu+IgYR7opSf2Uk=
+			LO4ZcPhNC57eG/9M90/jwtF9rZ/9/IIA4+NoYwRuTtI=
 			</data>
 		</dict>
-		<key>Base.lproj/Main.storyboardc/departuresViewController.nib</key>
+		<key>Base.lproj/Main.storyboardc/cdX-Ss-1XX-view-czb-vT-LD9.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			4N5mpUxHWDqyx9/IubM3b9cJsHA=
+			gsDM3XLdkJqRqrwolkze0AElfvM=
 			</data>
 			<key>hash2</key>
 			<data>
-			idgs8KjN/aCR7llYzbmMLm+sVjRZ8yjTHLbaopPkz68=
+			0Fiy4+9NGWBYCQwJbU/CrehX8yEoMWq4Lehsy4r3whE=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/enK-eW-HM8-view-RVL-CI-xOm.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			wfmlDg4PeZ1ryEKDtSCamTEI/9g=
+			uFuxJoPdA4t4kzbFzz01qx22Hjc=
 			</data>
 			<key>hash2</key>
 			<data>
-			vH/TKnKWdpGeFqyLuoo4Ax7iEqzBNQl6+zvqLD668Qk=
+			u9UHwAjrhtnCk+cKHy5ZsGhGpFtGo94icv6PofprY5I=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/pyI-CF-Enk-view-vpg-am-MMh.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			4I6RDLLXE1/7nvI6d/MiPzkbO58=
+			HUbAOkOH6wlWVP3Os0EjFcn7kpU=
 			</data>
 			<key>hash2</key>
 			<data>
-			KAiz4F3FeOQQmT4zly7rg3khv24awqH6k3CTLTIcQtg=
+			Qw9jyK2NK3fPHonk4/Bq9VW4osky5uQfEqvI6u3JYw0=
 			</data>
 		</dict>
 		<key>Frameworks/PPNSdk.framework/Info.plist</key>
@@ -192,11 +252,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0gHAjaxM+J9nmgvXLDD4tjjH48k=
+			fm2MpNDTwIOXNfQ6KSMJPKRrBD4=
 			</data>
 			<key>hash2</key>
 			<data>
-			XP+aTjFSL7ZkwJ4y/RKVR0VNGPYIklhwHz4oCPnihQc=
+			twjCX+ZPw99cEVVbWI8HKnp/VPz6K+M93CNCgYqBws8=
 			</data>
 		</dict>
 		<key>Frameworks/PPNSdk.framework/_CodeSignature/CodeResources</key>

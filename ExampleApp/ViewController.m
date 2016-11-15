@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "SearchViewController.h"
-#import "departuresViewController.h"
+#import "ListViewController.h"
 
 
 @import PPNSdk;
@@ -68,7 +68,7 @@
 - (IBAction)searchPressed:(id)sender {
 //    NSDictionary *dict = @{@"origincode":departureKey, @"destinationcode":arrivalKey, @"departuredate":_departureDateTextField.text};
         NSDictionary *dict = @{@"origincode":departureKey, @"checkindate":_arrivalAirportTextField.text, @"checkoutdate":_departureDateTextField.text};
-    departuresViewController *vc = [departuresViewController createForDepartures:YES withDictionary:dict];
+    ListViewController *vc = [ListViewController createForDepartures:YES withDictionary:dict];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

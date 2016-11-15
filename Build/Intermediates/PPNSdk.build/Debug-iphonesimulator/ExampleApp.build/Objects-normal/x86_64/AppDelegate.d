@@ -2,6 +2,9 @@ dependencies: \
   /Users/sameersiddiqui/Projects/PPNSdk/ExampleApp/AppDelegate.m \
   /Users/sameersiddiqui/Projects/PPNSdk/ExampleApp/AppDelegate.h \
   /Users/sameersiddiqui/Projects/PPNSdk/Build/Intermediates/PPNSdk.build/Debug-iphonesimulator/PPNSdk.build/module.modulemap \
+  /Users/sameersiddiqui/Projects/PPNSdk/PPNSdk/Hotel/Rates/HotelRatesResults.h \
+  /Users/sameersiddiqui/Projects/PPNSdk/PPNSdk/Hotel/Details/HotelDetailModel.h \
+  /Users/sameersiddiqui/Projects/PPNSdk/PPNSdk/Hotel/Details/HotelDetailResults.h \
   /Users/sameersiddiqui/Projects/PPNSdk/PPNSdk/Hotel/SearchResults/HotelSearchHotelModel.h \
   /Users/sameersiddiqui/Projects/PPNSdk/PPNSdk/Hotel/SearchResults/HotelSearchResults.h \
   /Users/sameersiddiqui/Projects/PPNSdk/PPNSdk/Hotel/AutoComplete/HotelAutoCompleteCityModel.h \

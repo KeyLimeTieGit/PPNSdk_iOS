@@ -36,6 +36,18 @@
 		<data>
 		oMe64X0RlHSQHEfsdYkCBKqlc/8=
 		</data>
+		<key>Headers/HotelDetailModel.h</key>
+		<data>
+		CUoz0TmXOQ2L0GDS+iZ65sKnOe8=
+		</data>
+		<key>Headers/HotelDetailResults.h</key>
+		<data>
+		8hRI4uQjM7gjPda1VM09oKhiNQg=
+		</data>
+		<key>Headers/HotelRatesResults.h</key>
+		<data>
+		rYiMczkFVJuwgmOW/KKyrYlWU+s=
+		</data>
 		<key>Headers/HotelSearchHotelModel.h</key>
 		<data>
 		u5ul8bKyLz4qulvKuJ74Zb6kT6c=
@@ -46,7 +58,7 @@
 		</data>
 		<key>Headers/PPNSdk.h</key>
 		<data>
-		FZvianq9KxxfHgKOkNgSolkHUMU=
+		01R/CwTTHo9AdfwN9XSp82IJwGE=
 		</data>
 		<key>Headers/PPNServices.h</key>
 		<data>
@@ -151,6 +163,39 @@
 			jva0vhF5QridSkxytcDGt3NR8VykiYnIozlLStaQRF4=
 			</data>
 		</dict>
+		<key>Headers/HotelDetailModel.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			CUoz0TmXOQ2L0GDS+iZ65sKnOe8=
+			</data>
+			<key>hash2</key>
+			<data>
+			dKNMNeKx7udPd9AaWgZqNqXnDVYkT367/wD3JyHswIY=
+			</data>
+		</dict>
+		<key>Headers/HotelDetailResults.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			8hRI4uQjM7gjPda1VM09oKhiNQg=
+			</data>
+			<key>hash2</key>
+			<data>
+			8apj1cypX3R1xl7NBz9eN2sv6V2xz4YmVXuE/XFBexo=
+			</data>
+		</dict>
+		<key>Headers/HotelRatesResults.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			rYiMczkFVJuwgmOW/KKyrYlWU+s=
+			</data>
+			<key>hash2</key>
+			<data>
+			KwlfoO8yOVyi0HLH0OL5KVcm8Jnv7ecIGgqtBluwt78=
+			</data>
+		</dict>
 		<key>Headers/HotelSearchHotelModel.h</key>
 		<dict>
 			<key>hash</key>
@@ -177,11 +222,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			FZvianq9KxxfHgKOkNgSolkHUMU=
+			01R/CwTTHo9AdfwN9XSp82IJwGE=
 			</data>
 			<key>hash2</key>
 			<data>
-			MWe8e50T2HC8QdTx71UlCbyhxw4vrqgJc21LgF52FkU=
+			JaknjfKdYrcuH9wos7/FiF/jTLWq1FQ8T5TxqWGMrr0=
 			</data>
 		</dict>
 		<key>Headers/PPNServices.h</key>
