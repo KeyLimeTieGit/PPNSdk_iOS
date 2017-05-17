@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "SearchViewController.h"
 #import "ListViewController.h"
 #import "DAYCalendarView.h"
 #import "UIViewController+Navigation.h"
@@ -27,7 +26,7 @@
 
 @import PPNSdk;
 
-@interface ViewController () <UITextFieldDelegate, SearchVCDelegate>
+@interface ViewController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *departureAirportTextField;
 @property (weak, nonatomic) IBOutlet UITextField *arrivalAirportTextField;
 @property (weak, nonatomic) IBOutlet UITextField *departureDateTextField;
@@ -40,8 +39,7 @@
 @implementation ViewController {
     NSString *departureKey;
     NSString *arrivalKey;
-    TravelType *departureTravelType;
-    TravelType *arrivalTravelType;
+
     UITapGestureRecognizer *tap;
 }
 
@@ -112,18 +110,6 @@
     return YES;
 }
 
-- (void)didSelectValue:(NSString *)string forKey:(NSString *)key withSearchType:(SearchType)searchType andTravelType:(TravelType)travelType {
-    if (searchType == Departures) {
-        _departureAirportTextField.text = string;
-        departureKey = key;
-        departureTravelType = &travelType;
-    }
-    else {
-        _arrivalAirportTextField.text = string;
-        arrivalKey = key;
-        arrivalTravelType = &travelType;
-    }
-}
 
 - (IBAction)searchPressed:(id)sender {
 

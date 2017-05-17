@@ -61,6 +61,10 @@
                 forControlEvents:UIControlEventEditingChanged];
 }
 
+- (IBAction)closeButtonPressed:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 #pragma mark - textfield delegate
 
@@ -135,7 +139,10 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    HotelAutoCompleteCityModel *cityModel = [[HotelAutoCompleteCityModel alloc]initWithJson:[self.citiesArray objectAtIndex:indexPath.row]];
+    [self.delegate didSelectCity:cityModel.city withCityPPNID:cityModel.cityid_ppn];
+    [self dismissViewControllerAnimated:YES completion:nil];
+
 }
 
 

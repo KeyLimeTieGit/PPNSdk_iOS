@@ -1,7 +1,6 @@
 dependencies: \
   /Users/sameersiddiqui/Projects/PPNSdk/ExampleApp/ViewController.m \
   /Users/sameersiddiqui/Projects/PPNSdk/ExampleApp/ViewController.h \
-  /Users/sameersiddiqui/Projects/PPNSdk/ExampleApp/SearchViewController.h \
   /Users/sameersiddiqui/Projects/PPNSdk/ExampleApp/ListViewController.h \
   /Users/sameersiddiqui/Projects/PPNSdk/ExampleApp/DAYCalendarView.h \
   /Users/sameersiddiqui/Projects/PPNSdk/ExampleApp/UIViewController+Navigation.h \

@@ -53,7 +53,6 @@
 		9C2DC53A1DD242FB00933515 /* PPNServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2DC5381DD242FB00933515 /* PPNServices.m */; };
 		9C2DC53D1DD2439600933515 /* PPNInternalManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C2DC53B1DD2439600933515 /* PPNInternalManager.h */; };
 		9C2DC53E1DD2439600933515 /* PPNInternalManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2DC53C1DD2439600933515 /* PPNInternalManager.m */; };
-		9C2DC5411DD25C8A00933515 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2DC5401DD25C8A00933515 /* SearchViewController.m */; };
 		9C2DC5441DD2727200933515 /* AirAutoCompleteAirportModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C2DC5421DD2727200933515 /* AirAutoCompleteAirportModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C2DC5451DD2727200933515 /* AirAutoCompleteAirportModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2DC5431DD2727200933515 /* AirAutoCompleteAirportModel.m */; };
 		9C2DC5481DD274C400933515 /* AirAutoCompleteCityModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C2DC5461DD274C400933515 /* AirAutoCompleteCityModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -109,6 +108,7 @@
 		9C627C471ECC9CE000ED089D /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C627C461ECC9CE000ED089D /* HomeViewController.m */; };
 		9C627C4A1ECCA52B00ED089D /* HomeSuggestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C627C491ECCA52B00ED089D /* HomeSuggestionCell.m */; };
 		9C627C4E1ECCC3CD00ED089D /* SearchDestinationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C627C4D1ECCC3CD00ED089D /* SearchDestinationViewController.m */; };
+		9C627C521ECCE99E00ED089D /* CreateItineraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C627C511ECCE99E00ED089D /* CreateItineraryViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -209,8 +209,6 @@
 		9C2DC5381DD242FB00933515 /* PPNServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPNServices.m; sourceTree = "<group>"; };
 		9C2DC53B1DD2439600933515 /* PPNInternalManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPNInternalManager.h; sourceTree = "<group>"; };
 		9C2DC53C1DD2439600933515 /* PPNInternalManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPNInternalManager.m; sourceTree = "<group>"; };
-		9C2DC53F1DD25C8A00933515 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
-		9C2DC5401DD25C8A00933515 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		9C2DC5421DD2727200933515 /* AirAutoCompleteAirportModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirAutoCompleteAirportModel.h; sourceTree = "<group>"; };
 		9C2DC5431DD2727200933515 /* AirAutoCompleteAirportModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirAutoCompleteAirportModel.m; sourceTree = "<group>"; };
 		9C2DC5461DD274C400933515 /* AirAutoCompleteCityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirAutoCompleteCityModel.h; sourceTree = "<group>"; };
@@ -279,6 +277,8 @@
 		9C627C491ECCA52B00ED089D /* HomeSuggestionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeSuggestionCell.m; sourceTree = "<group>"; };
 		9C627C4C1ECCC3CD00ED089D /* SearchDestinationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchDestinationViewController.h; sourceTree = "<group>"; };
 		9C627C4D1ECCC3CD00ED089D /* SearchDestinationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchDestinationViewController.m; sourceTree = "<group>"; };
+		9C627C501ECCE99E00ED089D /* CreateItineraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateItineraryViewController.h; sourceTree = "<group>"; };
+		9C627C511ECCE99E00ED089D /* CreateItineraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateItineraryViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -394,10 +394,10 @@
 				9C627C491ECCA52B00ED089D /* HomeSuggestionCell.m */,
 				9C627C4C1ECCC3CD00ED089D /* SearchDestinationViewController.h */,
 				9C627C4D1ECCC3CD00ED089D /* SearchDestinationViewController.m */,
+				9C627C501ECCE99E00ED089D /* CreateItineraryViewController.h */,
+				9C627C511ECCE99E00ED089D /* CreateItineraryViewController.m */,
 				9C2DC50A1DD23F1400933515 /* ViewController.h */,
 				9C2DC50B1DD23F1400933515 /* ViewController.m */,
-				9C2DC53F1DD25C8A00933515 /* SearchViewController.h */,
-				9C2DC5401DD25C8A00933515 /* SearchViewController.m */,
 				9C2DC5571DD3B61E00933515 /* ListViewController.h */,
 				9C2DC5581DD3B61E00933515 /* ListViewController.m */,
 				9C2DC50D1DD23F1400933515 /* Main.storyboard */,
@@ -809,8 +809,8 @@
 				9C2DC5091DD23F1400933515 /* AppDelegate.m in Sources */,
 				9C0BB22E1DF0962100C3A06D /* NSImage+WebCache.m in Sources */,
 				9C2DC5BA1DDBAC4400933515 /* DAYIndicatorView.m in Sources */,
+				9C627C521ECCE99E00ED089D /* CreateItineraryViewController.m in Sources */,
 				9C0BB22D1DF0962100C3A06D /* NSData+ImageContentType.m in Sources */,
-				9C2DC5411DD25C8A00933515 /* SearchViewController.m in Sources */,
 				9C2DC5801DD65F6400933515 /* HotelDetailViewController.m in Sources */,
 				9C2DC5BC1DDBAC4400933515 /* DAYUtils.m in Sources */,
 				9C0BB22F1DF0962100C3A06D /* SDImageCache.m in Sources */,

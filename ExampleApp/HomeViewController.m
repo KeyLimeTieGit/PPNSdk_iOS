@@ -10,6 +10,7 @@
 #import "HomeSuggestionCell.h"
 #import "UIViewController+Navigation.h"
 #import "ViewController.h"
+#import "CreateItineraryViewController.h"
 
 @interface HomeViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -75,7 +76,7 @@
 
 #pragma mark - Actions
 - (IBAction)hotelButtonPressed:(id)sender {
-    ViewController *vc = [ViewController create];
+    CreateItineraryViewController *vc = [CreateItineraryViewController create];
     [self.navigationController pushViewController:vc animated:YES];
 }
 - (IBAction)flightsButtonPressed:(id)sender {
