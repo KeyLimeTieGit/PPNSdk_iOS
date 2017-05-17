@@ -99,7 +99,16 @@
 }
 
 - (NSString *)neighborhood_name {
-    return [[[self json] objectForKey:@"neighborhood"] objectForKey:@"name"];
+    NSDictionary *neighborhood = [[self json] objectForKey:@"neighborhood"];
+    if (neighborhood != nil && ![neighborhood isKindOfClass:[NSNull class]]) {
+        NSString *str = [neighborhood objectForKey:@"name"];
+        if (str != nil && ![str isKindOfClass:[NSNull class]]) {
+            return str;
+        }
+        else return @"";
+    }
+    else return @"";
+    
 }
 
 - (NSString *)display_price {
@@ -118,5 +127,10 @@
     return [[[self json] objectForKey:@"review_count"] intValue];
 }
 
+- (id)checkIfEmpty:(id)object {
+    if ([object isKindOfClass:[NSNull class]]) return nil;
+    else if ([object isKindOfClass:[NSString class]] && [object isEqualToString:@""]) return nil;
+    else return object;
+}
 
 @end

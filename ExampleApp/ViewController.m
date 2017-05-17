@@ -10,7 +10,8 @@
 #import "SearchViewController.h"
 #import "ListViewController.h"
 #import "DAYCalendarView.h"
-
+#import "UIViewController+Navigation.h"
+#import "SearchDestinationViewController.h"
 
 #define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
 #define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
@@ -44,14 +45,23 @@
     UITapGestureRecognizer *tap;
 }
 
++ (ViewController *)create {
+    NSBundle *frameworkBundle = [NSBundle bundleForClass:[self class]];
+    ViewController *main = [[UIStoryboard storyboardWithName:@"Main" bundle:frameworkBundle] instantiateViewControllerWithIdentifier:NSStringFromClass([ViewController class])];
+    return main;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-//    tap = [[UITapGestureRecognizer alloc]
-//                                   initWithTarget:self
-//                                   action:@selector(dismissKeyboard)];
-//    
-//    [self.view addGestureRecognizer:tap];
+    tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    [tap setCancelsTouchesInView:NO];
+    
+    [self.view addGestureRecognizer:tap];
+    
+    [self navBarWithAAAIconAndGearIconAndTitle:@"Search Hotels"];
 
     _arrivalAirportTextField.delegate = self;
     _departureAirportTextField.delegate = self;
@@ -68,18 +78,12 @@
     
 }
 
--(void)viewDidAppear:(BOOL)animated {
-//    [super viewDidAppear:animated];
-//    [self.view addGestureRecognizer:tap];
-}
-
-- (void)viewDidDisappear:(BOOL)animated {
-//    [super viewDidDisappear:animated];
-//    [self.view removeGestureRecognizer:tap];
+- (void)dealloc {
+    [self.view removeGestureRecognizer:tap];
 }
 
 - (void)calendarViewDidChange:(id)sender {
-    //    self.datePicker.date = self.calendarView.selectedDate;
+
     
     if (sender == self.checkoutcalendarView) {
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -90,8 +94,6 @@
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
         formatter.dateFormat = @"MM/dd/yyyy";
         self.arrivalAirportTextField.text = [formatter stringFromDate:self.checkincalendarView.selectedDate];
-//        self.checkoutcalendarView.selectedDate = self.checkincalendarView.selectedDate;
-
     }
     
 }
@@ -102,16 +104,9 @@
 }
 
 -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
-//    if (textField == _arrivalAirportTextField) {
-//        SearchViewController *vc = [SearchViewController createForDepartures:NO];
-//        [self presentViewController:vc animated:YES completion:nil];
-//        vc.delegate = self;
-//        return NO;
-//    }
     if (textField == _departureAirportTextField) {
-        SearchViewController *vc = [SearchViewController createForDepartures:YES];
-        [self presentViewController:vc animated:YES completion:nil];
-        vc.delegate = self;
+        SearchDestinationViewController *vc = [SearchDestinationViewController create];
+        [self presentViewController:vc animated:true completion:nil];
         return NO;
     }
     return YES;
@@ -131,10 +126,31 @@
 }
 
 - (IBAction)searchPressed:(id)sender {
-//    NSDictionary *dict = @{@"origincode":departureKey, @"destinationcode":arrivalKey, @"departuredate":_departureDateTextField.text};
-        NSDictionary *dict = @{@"origincode":departureKey, @"checkindate":_arrivalAirportTextField.text, @"checkoutdate":_departureDateTextField.text};
-    ListViewController *vc = [ListViewController createForDepartures:YES withDictionary:dict];
-    [self.navigationController pushViewController:vc animated:YES];
+
+    if ([_departureAirportTextField.text isEqualToString:@""]) {
+        [self showAlertWithMessage:@"Must select Destination City"];
+    }
+    else if ([_arrivalAirportTextField.text isEqualToString:@""]) {
+        [self showAlertWithMessage:@"Check-in date cannot be empty"];
+    }
+    else if ([_departureDateTextField.text isEqualToString:@""]) {
+        [self showAlertWithMessage:@"Check-out date cannot be empty"];
+    }
+    else {
+            NSDictionary *dict = @{@"origincode":departureKey, @"checkindate":_arrivalAirportTextField.text, @"checkoutdate":_departureDateTextField.text};
+            ListViewController *vc = [ListViewController createForDepartures:YES withDictionary:dict];
+            [self.navigationController pushViewController:vc animated:YES];
+    }
+}
+
+- (void)showAlertWithMessage:(NSString *)message {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:message
+                                                                   message:@""
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction* prodUser = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                     handler:nil];
+    [alert addAction:prodUser];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 @end

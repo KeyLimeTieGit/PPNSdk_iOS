@@ -9,6 +9,7 @@
 #import "HotelRatesViewController.h"
 #import "HotelRatesTableViewCell.h"
 #import "HotelContractViewController.h"
+#import "UIViewController+Navigation.h"
 
 @import PPNSdk;
 
@@ -39,6 +40,7 @@
     // Do any additional setup after loading the view.
     activity = [[UIActivityIndicatorView alloc]init];
     activity.center = self.view.center;
+    [self navBarWithAAAIconAndGearIconAndTitle:@"Rates"];
     [self.view insertSubview:activity aboveSubview:self.tableView];
     [activity setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleGray];
     [activity hidesWhenStopped];
@@ -56,7 +58,6 @@
     NSString *newcheckin = [NSString stringWithFormat:@"%@-%@-%@",[checkinArray objectAtIndex:2],[checkinArray objectAtIndex:0],[checkinArray objectAtIndex:1]];
     NSString *newcheckout = [NSString stringWithFormat:@"%@-%@-%@",[checkoutArray objectAtIndex:2],[checkoutArray objectAtIndex:0],[checkoutArray objectAtIndex:1]];
 
-    
     
     HotelRatesResults *results = [HotelRatesResults new];
     [results getHotelRatesForHotelID:hotelid rooms:@"1" adults:@"1" children:@"0" checkin:newcheckin checkout:newcheckout withCompletionBlock:^(NSArray *rates, NSError *error) {

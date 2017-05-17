@@ -12,7 +12,7 @@
 
 @import PPNSdk;
 
-@interface SearchViewController () <UITableViewDelegate, UITableViewDataSource, UISearchControllerDelegate, UISearchBarDelegate>
+@interface SearchViewController () <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
@@ -51,20 +51,7 @@
 HotelAutoCompleteResults *autocomplete;
 
 - (void)getDataForString:(NSString *)string {
-//    AirAutoCompleteResults *autoComplete = [AirAutoCompleteResults new];
-//    [autoComplete getAutoCompleteResultsForString:string withCompletionBlock:^(NSArray *airports, NSArray *cities, NSError *error) {
-//        if (!error) {
-//            if (airports.count > 0) {
-//                airportsArray = airports;
-//            }
-//            if (cities.count > 0) {
-//                citiesArray = cities;
-//            }
-//            dispatch_async(dispatch_get_main_queue(), ^{
-//                [self.tableView reloadData];
-//            });
-//        }
-//    }];
+
     dispatch_async(dispatch_get_main_queue(), ^{
         [activity startAnimating];
     });
@@ -159,6 +146,7 @@ HotelAutoCompleteResults *autocomplete;
 }
 
 #pragma mark - UISearchControllerDelegate
+
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
     [self getDataForString:searchText];

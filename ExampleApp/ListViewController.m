@@ -8,6 +8,10 @@
 
 #import "ListViewController.h"
 #import "HotelDetailViewController.h"
+#import "HotelListTableViewCell.h"
+#import "UIViewController+Navigation.h"
+
+
 
 @import PPNSdk;
 
@@ -29,6 +33,10 @@
     return main;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = NO;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -40,6 +48,7 @@
     [self.view insertSubview:activity aboveSubview:self.tableView];
     [activity setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleGray];
     [activity hidesWhenStopped];
+    [self navBarWithAAAIconAndGearIconAndTitle:@"Hotels"];
 }
 
 - (void)getData {
@@ -72,13 +81,11 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell;
-    cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil];
 
-    
     HotelSearchHotelModel *model = [[HotelSearchHotelModel alloc]initWithJson:[htls objectAtIndex:indexPath.row]];
-    cell.textLabel.text = model.name;
-    cell.detailTextLabel.text = model.display_price;
+    HotelListTableViewCell *cell = (HotelListTableViewCell *)[self.tableView dequeueReusableCellWithIdentifier:@"hotellistcell"];
+    cell.hotel = model;
+    [cell modifyCell];
     
     return cell;
 }

@@ -8,6 +8,8 @@
 
 #import "HotelDetailViewController.h"
 #import "HotelRatesViewController.h"
+#import "UIViewController+Navigation.h"
+
 @import PPNSdk;
 
 @interface HotelDetailViewController ()
@@ -35,7 +37,8 @@
     // Do any additional setup after loading the view.
     
     self.hotelDescriptionLabel.numberOfLines = 0;
-    
+    [self navBarWithAAAIconAndGearIconAndTitle:@"Hotel Details"];
+
     activity = [[UIActivityIndicatorView alloc]init];
     activity.center = self.view.center;
     [self.view addSubview:activity];
