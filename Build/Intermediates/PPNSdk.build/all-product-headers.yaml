@@ -4,7 +4,7 @@
   'roots': [
     {
       'type': 'directory',
-      'name': "/Users/sameersiddiqui/Projects/PPNSdk/Build/Products/Debug-iphoneos/PPNSdk.framework/Headers",
+      'name': "/Users/sameersiddiqui/Projects/PPNSdk/Build/Products/Debug-iphonesimulator/PPNSdk.framework/Headers",
       'contents': [
         {
           'type': 'file',
@@ -89,7 +89,7 @@
         {
           'type': 'file',
           'name': "PPNSdk-Swift.h",
-          'external-contents': "/Users/sameersiddiqui/Projects/PPNSdk/Build/Products/Debug-iphoneos/PPNSdk.framework/Headers/PPNSdk-Swift.h"
+          'external-contents': "/Users/sameersiddiqui/Projects/PPNSdk/Build/Products/Debug-iphonesimulator/PPNSdk.framework/Headers/PPNSdk-Swift.h"
         },
         {
           'type': 'file',
@@ -105,12 +105,12 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/sameersiddiqui/Projects/PPNSdk/Build/Products/Debug-iphoneos/PPNSdk.framework/Modules",
+      'name': "/Users/sameersiddiqui/Projects/PPNSdk/Build/Products/Debug-iphonesimulator/PPNSdk.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/sameersiddiqui/Projects/PPNSdk/Build/Intermediates/PPNSdk.build/Debug-iphoneos/PPNSdk.build/module.modulemap"
+          'external-contents': "/Users/sameersiddiqui/Projects/PPNSdk/Build/Intermediates/PPNSdk.build/Debug-iphonesimulator/PPNSdk.build/module.modulemap"
         }
       ]
     }

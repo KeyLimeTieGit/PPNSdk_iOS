@@ -1,0 +1,10 @@
+framework module PopupCalendar {
+  umbrella header "PopupCalendar.h"
+
+  export *
+  module * { export * }
+}
+
+module PopupCalendar.Swift {
+    header "PopupCalendar-Swift.h"
+}

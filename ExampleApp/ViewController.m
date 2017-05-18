@@ -124,8 +124,8 @@
     }
     else {
             NSDictionary *dict = @{@"origincode":departureKey, @"checkindate":_arrivalAirportTextField.text, @"checkoutdate":_departureDateTextField.text};
-            ListViewController *vc = [ListViewController createForDepartures:YES withDictionary:dict];
-            [self.navigationController pushViewController:vc animated:YES];
+//            ListViewController *vc = [ListViewController createForDepartures:YES withDictionary:dict];
+//            [self.navigationController pushViewController:vc animated:YES];
     }
 }
 

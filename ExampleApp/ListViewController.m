@@ -21,15 +21,13 @@
 @end
 
 @implementation ListViewController {
-    NSDictionary *passedDict;
     NSArray *htls;
     UIActivityIndicatorView *activity;
 }
 
-+ (ListViewController *)createForDepartures:(BOOL)departures withDictionary:(NSDictionary *)travelDict{
++ (ListViewController *)create{
     NSBundle *frameworkBundle = [NSBundle bundleForClass:[self class]];
     ListViewController *main = [[UIStoryboard storyboardWithName:@"Main" bundle:frameworkBundle] instantiateViewControllerWithIdentifier:NSStringFromClass([ListViewController class])];
-    main->passedDict = travelDict;
     return main;
 }
 
@@ -53,17 +51,19 @@
 
 - (void)getData {
     
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    formatter.dateFormat = @"MM/dd/yyyy";
     
-    NSString *origincode = [passedDict objectForKey:@"origincode"];
-    NSString *checkindate = [passedDict objectForKey:@"checkindate"];
-    NSString *checkoutdate = [passedDict objectForKey:@"checkoutdate"];
+    
+    NSString *checkindate = [formatter stringFromDate:self.checkinDate];
+    NSString *checkoutdate = [formatter stringFromDate:self.checkoutDate];
     
     dispatch_async(dispatch_get_main_queue(), ^{
         [activity startAnimating];
     });
 
     HotelSearchResults *results = [HotelSearchResults new];
-    [results getHotelSearchResultsWithCheckIn:checkindate checkout:checkoutdate cityid:origincode rooms:1 adults:1 children:0 withCompletionBLock:^(NSArray *hotels, NSError *error) {
+    [results getHotelSearchResultsWithCheckIn:checkindate checkout:checkoutdate cityid:self.cityppnID rooms:1 adults:self.numberOfAdults children:self.numberOfChildren withCompletionBLock:^(NSArray *hotels, NSError *error) {
         htls = hotels;
         dispatch_async(dispatch_get_main_queue(), ^{
             [activity stopAnimating];
@@ -93,7 +93,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     HotelSearchHotelModel *model = [[HotelSearchHotelModel alloc]initWithJson:[htls objectAtIndex:indexPath.row]];
     HotelDetailViewController *vc = [HotelDetailViewController createwithHotelID:model.hotel_id];
-    vc.passedDict = passedDict;
+//    vc.passedDict = passedDict;
     [self.navigationController pushViewController:vc animated:YES];
 }
 

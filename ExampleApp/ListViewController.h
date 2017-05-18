@@ -9,5 +9,12 @@
 #import "ViewController.h"
 
 @interface ListViewController : ViewController
-+ (ListViewController *)createForDepartures:(BOOL)departures withDictionary:(NSDictionary *)travelDict;
++ (ListViewController *)create;
+
+@property (nonatomic) int numberOfAdults;
+@property (nonatomic) int numberOfChildren;
+@property (strong, nonatomic)  NSDate *checkinDate;
+@property (strong, nonatomic)  NSDate *checkoutDate;
+@property (strong, nonatomic)  NSString *cityppnID;
+
 @end
