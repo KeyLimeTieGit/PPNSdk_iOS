@@ -142,10 +142,27 @@
 }
 
 - (NSString *)hotel_description {
-    return [[self json] objectForKey:@"hotel_description"];
+    if ([[[self json] objectForKey:@"hotel_description"] isKindOfClass:[NSNull class]]) {
+        return nil;
+    }
+    else {
+        return [[self json] objectForKey:@"hotel_description"];
+    }
 }
 
 - (NSString *)room_count {
     return [[self json] objectForKey:@"room_count"];
 }
+
+- (NSArray<HotelAmenitiesModel *> *)amenities {
+    NSDictionary *amenityData = [self.json objectForKey:@"amenity_data"];
+    NSMutableArray<HotelAmenitiesModel *> *amenities = [NSMutableArray new];
+    for (NSString *key in amenityData) {
+        NSDictionary *value = [amenityData objectForKey:key];
+        HotelAmenitiesModel *amenity = [[HotelAmenitiesModel alloc]initWithJson:value];
+        [amenities addObject:amenity];
+    }
+    return amenities;
+}
+
 @end

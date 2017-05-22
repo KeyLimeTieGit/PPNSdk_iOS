@@ -11,6 +11,8 @@
 #import <PopupCalendar/PopupCalendar-Swift.h>
 #import "GuestsPopupViewController.h"
 #import "ListViewController.h"
+#import "UIViewController+Navigation.h"
+
 
 
 @interface CreateItineraryViewController () <SearchDestinationDelegate, CalendarViewDelegate, GuestsDelegate>
@@ -19,11 +21,11 @@
 @property (weak, nonatomic) IBOutlet UIButton *datesButton;
 @property (weak, nonatomic) IBOutlet UIButton *numberOfGuestsButton;
 
-
 @end
 
 @implementation CreateItineraryViewController {
     NSString *selectedCityPPNID;
+    NSString *selectedCity;
     int numberOfAdults;
     int numberOfChildren;
     NSDate *checkInDate;
@@ -40,6 +42,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor lightGrayColor];
+    [self addBackButton];
+    [self setNavBarTitle:@"Hotel Itinerary"];
     numberOfAdults = 1;
     numberOfChildren = 0;
     checkInDate = [NSDate new];
@@ -51,13 +55,13 @@
 - (IBAction)destinationbuttonPressed:(id)sender {
     SearchDestinationViewController *vc = [SearchDestinationViewController create];
     vc.delegate = self;
+    vc.modalPresentationStyle = UIModalPresentationOverCurrentContext;
     [self presentViewController:vc animated:YES completion:nil];
 }
 - (IBAction)datesButtonPressed:(id)sender {
     CalendarViewController *vc = [CalendarViewController create];
     vc.delegate = self;
     vc.modalPresentationStyle = UIModalPresentationOverCurrentContext;
-
     [self presentViewController:vc animated:YES completion:nil];
 }
 - (IBAction)numberOfGuestButtonPressed:(id)sender {
@@ -73,6 +77,7 @@
     NSString *cityString = [NSString stringWithFormat:@"  📍 %@", city];
     [self.destinationButton setTitle:cityString forState:UIControlStateNormal];
     selectedCityPPNID = city_PPN_ID;
+    selectedCity = city;
 }
 
 - (void)didSelectDatesWithCheckinDate:(NSDate *)checkinDate checkoutDate:(NSDate *)checkoutDate {
@@ -96,13 +101,29 @@
 }
 
 - (IBAction)search:(id)sender {
-    ListViewController *vc = [ListViewController create];
-    vc.numberOfAdults = numberOfAdults;
-    vc.numberOfChildren = numberOfChildren;
-    vc.checkinDate = checkInDate;
-    vc.checkoutDate = checkOutDate;
-    vc.cityppnID = selectedCityPPNID;
-    [self.navigationController pushViewController:vc animated:YES];
+    if ([self.destinationButton.titleLabel.text isEqualToString:@"  📍 Destination"]) {
+        [self showAlertWithMessage:@"Please select a destination"];
+    }
+    else {
+        ListViewController *vc = [ListViewController create];
+        vc.numberOfAdults = numberOfAdults;
+        vc.numberOfChildren = numberOfChildren;
+        vc.checkinDate = checkInDate;
+        vc.checkoutDate = checkOutDate;
+        vc.cityppnID = selectedCityPPNID;
+        vc.city = selectedCity;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+}
+
+- (void)showAlertWithMessage:(NSString *)message {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:message
+                                                                   message:@""
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction* prodUser = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                     handler:nil];
+    [alert addAction:prodUser];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 

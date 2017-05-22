@@ -32,8 +32,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.view.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.6];
+    
     UIImageView *imgview = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 15, 15)];
-    imgview.image = [UIImage imageNamed:@"hotelplaceholder"];
+    imgview.image = [UIImage imageNamed:@"pin"];
     imgview.contentMode = UIViewContentModeScaleAspectFit;
     
     self.citiesArray = [NSArray new];
@@ -130,6 +132,9 @@
     else {
         cell.textLabel.text = cityModel.city;
     }
+    cell.backgroundColor = [UIColor clearColor];
+    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.detailTextLabel.textColor = [[UIColor whiteColor] colorWithAlphaComponent:0.7];
     cell.detailTextLabel.text = cityModel.country;
     return cell;
 }

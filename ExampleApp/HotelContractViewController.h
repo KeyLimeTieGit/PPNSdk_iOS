@@ -6,9 +6,9 @@
 //  Copyright © 2016 KeyLimeTie. All rights reserved.
 //
 
-#import "ViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface HotelContractViewController : ViewController
+@interface HotelContractViewController : UIViewController
 
 + (HotelContractViewController *)createwithBundle:(NSString *)ppn_bundle;
 

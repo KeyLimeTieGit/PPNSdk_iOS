@@ -37,8 +37,8 @@
     // Do any additional setup after loading the view.
     
     self.hotelDescriptionLabel.numberOfLines = 0;
-    [self navBarWithAAAIconAndGearIconAndTitle:@"Hotel Details"];
-
+    [self addBackButton];
+    [self setNavBarTitle:@"Hotel Details"];
     activity = [[UIActivityIndicatorView alloc]init];
     activity.center = self.view.center;
     [self.view addSubview:activity];
@@ -67,7 +67,14 @@
 }
 
 - (IBAction)selectRoomPressed:(id)sender {
-    HotelRatesViewController *vc = [HotelRatesViewController createwithHotelID:hotelid andPassedDictionary:self.passedDict];
+    HotelRatesViewController *vc = [HotelRatesViewController create];
+    vc.city = self.city;
+    vc.cityppnID = self.cityppnID;
+    vc.checkinDate = self.checkinDate;
+    vc.checkoutDate = self.checkoutDate;
+    vc.numberOfChildren = self.numberOfChildren;
+    vc.numberOfAdults = self.numberOfAdults;
+    vc.hotelID = hotelid;
     [self.navigationController pushViewController:vc animated:YES];
 }
 

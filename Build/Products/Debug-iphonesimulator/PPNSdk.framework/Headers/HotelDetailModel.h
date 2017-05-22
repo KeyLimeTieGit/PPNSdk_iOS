@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "HotelAmenitiesModel.h"
+
 
 @interface HotelDetailModel : NSObject
 
@@ -40,6 +42,9 @@
 @property (weak, nonatomic, readonly) NSString *check_out_time;
 @property (weak, nonatomic, readonly) NSString *hotel_description;
 @property (weak, nonatomic, readonly) NSString *room_count;
+
+@property (weak, nonatomic, readonly) NSArray<HotelAmenitiesModel *>* amenities;
+
 
 @property (nonatomic) int review_count;
 

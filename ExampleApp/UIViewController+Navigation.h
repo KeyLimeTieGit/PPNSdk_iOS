@@ -12,6 +12,6 @@
 
 - (void)setNavBarTitle:(NSString *)title;
 - (void)navBarWithAAAIconAndGearIconAndTitle:(NSString *)title;
-//- (void)navBarWithAAAIconAndGearIconAndJoinNow;
-
+- (void)addBackButton;
+- (void)goBackScreen;
 @end

@@ -33,7 +33,6 @@
 		9C2DC4F81DD23F0500933515 /* PPNSdk.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C2DC4F61DD23F0500933515 /* PPNSdk.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C2DC5061DD23F1400933515 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2DC5051DD23F1400933515 /* main.m */; };
 		9C2DC5091DD23F1400933515 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2DC5081DD23F1400933515 /* AppDelegate.m */; };
-		9C2DC50C1DD23F1400933515 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2DC50B1DD23F1400933515 /* ViewController.m */; };
 		9C2DC50F1DD23F1400933515 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C2DC50D1DD23F1400933515 /* Main.storyboard */; };
 		9C2DC5111DD23F1400933515 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C2DC5101DD23F1400933515 /* Assets.xcassets */; };
 		9C2DC5141DD23F1400933515 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C2DC5121DD23F1400933515 /* LaunchScreen.storyboard */; };
@@ -108,6 +107,8 @@
 		9C38E1E61ECE38420029E2F3 /* PopupCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C38E1E51ECE38420029E2F3 /* PopupCalendar.framework */; };
 		9C38E1E81ECE38480029E2F3 /* PopupCalendar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9C38E1E51ECE38420029E2F3 /* PopupCalendar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9C38E1EB1ECE3E7A0029E2F3 /* GuestsPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C38E1EA1ECE3E7A0029E2F3 /* GuestsPopupViewController.m */; };
+		9C38E1EE1ED3674C0029E2F3 /* HotelAmenitiesModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C38E1EC1ED3674C0029E2F3 /* HotelAmenitiesModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C38E1EF1ED3674C0029E2F3 /* HotelAmenitiesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C38E1ED1ED3674C0029E2F3 /* HotelAmenitiesModel.m */; };
 		9C627C471ECC9CE000ED089D /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C627C461ECC9CE000ED089D /* HomeViewController.m */; };
 		9C627C4A1ECCA52B00ED089D /* HomeSuggestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C627C491ECCA52B00ED089D /* HomeSuggestionCell.m */; };
 		9C627C4E1ECCC3CD00ED089D /* SearchDestinationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C627C4D1ECCC3CD00ED089D /* SearchDestinationViewController.m */; };
@@ -193,8 +194,6 @@
 		9C2DC5051DD23F1400933515 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9C2DC5071DD23F1400933515 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9C2DC5081DD23F1400933515 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9C2DC50A1DD23F1400933515 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9C2DC50B1DD23F1400933515 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9C2DC50E1DD23F1400933515 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9C2DC5101DD23F1400933515 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C2DC5131DD23F1400933515 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -278,6 +277,8 @@
 		9C38E1E51ECE38420029E2F3 /* PopupCalendar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PopupCalendar.framework; sourceTree = "<group>"; };
 		9C38E1E91ECE3E7A0029E2F3 /* GuestsPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuestsPopupViewController.h; sourceTree = "<group>"; };
 		9C38E1EA1ECE3E7A0029E2F3 /* GuestsPopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuestsPopupViewController.m; sourceTree = "<group>"; };
+		9C38E1EC1ED3674C0029E2F3 /* HotelAmenitiesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotelAmenitiesModel.h; sourceTree = "<group>"; };
+		9C38E1ED1ED3674C0029E2F3 /* HotelAmenitiesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelAmenitiesModel.m; sourceTree = "<group>"; };
 		9C627C451ECC9CE000ED089D /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		9C627C461ECC9CE000ED089D /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		9C627C481ECCA52B00ED089D /* HomeSuggestionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeSuggestionCell.h; sourceTree = "<group>"; };
@@ -406,8 +407,6 @@
 				9C627C511ECCE99E00ED089D /* CreateItineraryViewController.m */,
 				9C38E1E91ECE3E7A0029E2F3 /* GuestsPopupViewController.h */,
 				9C38E1EA1ECE3E7A0029E2F3 /* GuestsPopupViewController.m */,
-				9C2DC50A1DD23F1400933515 /* ViewController.h */,
-				9C2DC50B1DD23F1400933515 /* ViewController.m */,
 				9C2DC5571DD3B61E00933515 /* ListViewController.h */,
 				9C2DC5581DD3B61E00933515 /* ListViewController.m */,
 				9C2DC50D1DD23F1400933515 /* Main.storyboard */,
@@ -545,6 +544,8 @@
 				9C2DC5821DD668B000933515 /* HotelDetailParser.m */,
 				9C2DC5851DD66B7700933515 /* HotelDetailModel.h */,
 				9C2DC5861DD66B7700933515 /* HotelDetailModel.m */,
+				9C38E1EC1ED3674C0029E2F3 /* HotelAmenitiesModel.h */,
+				9C38E1ED1ED3674C0029E2F3 /* HotelAmenitiesModel.m */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -643,6 +644,7 @@
 				9C2DC55E1DD4E37200933515 /* HotelAutoCompleteResults.h in Headers */,
 				9C2DC5971DDB79FA00933515 /* HotelRatesModel.h in Headers */,
 				9C2DC5AB1DDBA10000933515 /* HotelContractModel.h in Headers */,
+				9C38E1EE1ED3674C0029E2F3 /* HotelAmenitiesModel.h in Headers */,
 				9C2DC5A01DDB998A00933515 /* HotelContractResults.h in Headers */,
 				9C2DC58C1DDA402800933515 /* HotelRatesResults.h in Headers */,
 				9C2DC57C1DD65CDD00933515 /* HotelDetailResults.h in Headers */,
@@ -779,6 +781,7 @@
 				9C2DC5A81DDB9BCC00933515 /* HotelContractParser.m in Sources */,
 				9C2DC5221DD23FDC00933515 /* AirAutoCompleteParser.m in Sources */,
 				9C2DC57D1DD65CDD00933515 /* HotelDetailResults.m in Sources */,
+				9C38E1EF1ED3674C0029E2F3 /* HotelAmenitiesModel.m in Sources */,
 				9C2DC5561DD2874600933515 /* FlightDepartureItineraryModel.m in Sources */,
 				9C2DC52A1DD23FEB00933515 /* PPNClient.m in Sources */,
 				9C2DC54E1DD279A500933515 /* FlightDepartureResults.m in Sources */,
@@ -806,7 +809,6 @@
 				9C0BB22C1DF0962100C3A06D /* MKAnnotationView+WebCache.m in Sources */,
 				9C38E1EB1ECE3E7A0029E2F3 /* GuestsPopupViewController.m in Sources */,
 				9C0BB2361DF0962100C3A06D /* SDWebImagePrefetcher.m in Sources */,
-				9C2DC50C1DD23F1400933515 /* ViewController.m in Sources */,
 				9C627C4E1ECCC3CD00ED089D /* SearchDestinationViewController.m in Sources */,
 				9C2DC5901DDB6FF900933515 /* HotelRatesViewController.m in Sources */,
 				9C0BB2391DF0962100C3A06D /* UIImage+MultiFormat.m in Sources */,
@@ -974,6 +976,7 @@
 		9C2DC4FC1DD23F0500933515 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = H72Y3J4J5V;
@@ -993,6 +996,7 @@
 		9C2DC4FD1DD23F0500933515 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = H72Y3J4J5V;

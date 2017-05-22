@@ -24,6 +24,10 @@
 		<data>
 		GaKvI+EqhbzzT38usQhon6G5eZQ=
 		</data>
+		<key>Headers/HotelAmenitiesModel.h</key>
+		<data>
+		yEuwBXf/Vm7mqyX4hJYxBWY3w4o=
+		</data>
 		<key>Headers/HotelAutoCompleteAirportModel.h</key>
 		<data>
 		rIdXE+9i/I2hJSWaZG0z9SAQ2Os=
@@ -46,7 +50,7 @@
 		</data>
 		<key>Headers/HotelDetailModel.h</key>
 		<data>
-		CUoz0TmXOQ2L0GDS+iZ65sKnOe8=
+		IIJG7eLN2TRSyeakW8ArCob0+8E=
 		</data>
 		<key>Headers/HotelDetailResults.h</key>
 		<data>
@@ -142,6 +146,17 @@
 			RHNbiHRATAbzGbuqrHo6MQkKWwIrJ7scHknXRNre8xA=
 			</data>
 		</dict>
+		<key>Headers/HotelAmenitiesModel.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			yEuwBXf/Vm7mqyX4hJYxBWY3w4o=
+			</data>
+			<key>hash2</key>
+			<data>
+			8U+JWayYMBTWbuZaSUiTjyvrfbDkfD9WnjA9HhkE0yM=
+			</data>
+		</dict>
 		<key>Headers/HotelAutoCompleteAirportModel.h</key>
 		<dict>
 			<key>hash</key>
@@ -201,11 +216,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			CUoz0TmXOQ2L0GDS+iZ65sKnOe8=
+			IIJG7eLN2TRSyeakW8ArCob0+8E=
 			</data>
 			<key>hash2</key>
 			<data>
-			dKNMNeKx7udPd9AaWgZqNqXnDVYkT367/wD3JyHswIY=
+			W7Odbzur99HjZGMNjJPZUNI2ih2bCl1uvevc60Ff3s8=
 			</data>
 		</dict>
 		<key>Headers/HotelDetailResults.h</key>

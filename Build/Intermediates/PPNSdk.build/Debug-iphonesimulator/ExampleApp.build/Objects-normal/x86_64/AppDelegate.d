@@ -6,6 +6,7 @@ dependencies: \
   /Users/sameersiddiqui/Projects/PPNSdk/PPNSdk/Hotel/Contract/HotelContractResults.h \
   /Users/sameersiddiqui/Projects/PPNSdk/PPNSdk/Hotel/Rates/HotelRatesModel.h \
   /Users/sameersiddiqui/Projects/PPNSdk/PPNSdk/Hotel/Rates/HotelRatesResults.h \
+  /Users/sameersiddiqui/Projects/PPNSdk/PPNSdk/Hotel/Details/HotelAmenitiesModel.h \
   /Users/sameersiddiqui/Projects/PPNSdk/PPNSdk/Hotel/Details/HotelDetailModel.h \
   /Users/sameersiddiqui/Projects/PPNSdk/PPNSdk/Hotel/Details/HotelDetailResults.h \
   /Users/sameersiddiqui/Projects/PPNSdk/PPNSdk/Hotel/SearchResults/HotelSearchHotelModel.h \

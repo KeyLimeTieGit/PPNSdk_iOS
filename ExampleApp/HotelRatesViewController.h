@@ -6,10 +6,18 @@
 //  Copyright © 2016 KeyLimeTie. All rights reserved.
 //
 
-#import "ViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface HotelRatesViewController : ViewController
+@interface HotelRatesViewController : UIViewController
 
-+ (HotelRatesViewController *)createwithHotelID:(NSString *)hotelID andPassedDictionary:(NSDictionary *)dict;
++ (HotelRatesViewController *)create;
+
+@property (nonatomic) int numberOfAdults;
+@property (nonatomic) int numberOfChildren;
+@property (strong, nonatomic)  NSString *checkinDate;
+@property (strong, nonatomic)  NSString *checkoutDate;
+@property (strong, nonatomic)  NSString *cityppnID;
+@property (strong, nonatomic)  NSString *city;
+@property (strong, nonatomic)  NSString *hotelID;
 
 @end

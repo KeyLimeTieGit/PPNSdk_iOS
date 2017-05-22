@@ -4,7 +4,7 @@
   'roots': [
     {
       'type': 'directory',
-      'name': "/Users/sameersiddiqui/Projects/PPNSdk/Build/Products/Debug-iphonesimulator/PPNSdk.framework/Headers",
+      'name': "/Users/sameersiddiqui/Projects/PPNSdk/Build/Products/Release-iphonesimulator/PPNSdk.framework/Headers",
       'contents': [
         {
           'type': 'file',
@@ -30,6 +30,11 @@
           'type': 'file',
           'name': "FlightDepartureResults.h",
           'external-contents': "/Users/sameersiddiqui/Projects/PPNSdk/PPNSdk/Air/FlightDepartures/FlightDepartureResults.h"
+        },
+        {
+          'type': 'file',
+          'name': "HotelAmenitiesModel.h",
+          'external-contents': "/Users/sameersiddiqui/Projects/PPNSdk/PPNSdk/Hotel/Details/HotelAmenitiesModel.h"
         },
         {
           'type': 'file',
@@ -89,7 +94,7 @@
         {
           'type': 'file',
           'name': "PPNSdk-Swift.h",
-          'external-contents': "/Users/sameersiddiqui/Projects/PPNSdk/Build/Products/Debug-iphonesimulator/PPNSdk.framework/Headers/PPNSdk-Swift.h"
+          'external-contents': "/Users/sameersiddiqui/Projects/PPNSdk/Build/Products/Release-iphonesimulator/PPNSdk.framework/Headers/PPNSdk-Swift.h"
         },
         {
           'type': 'file',
@@ -105,12 +110,12 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/sameersiddiqui/Projects/PPNSdk/Build/Products/Debug-iphonesimulator/PPNSdk.framework/Modules",
+      'name': "/Users/sameersiddiqui/Projects/PPNSdk/Build/Products/Release-iphonesimulator/PPNSdk.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/sameersiddiqui/Projects/PPNSdk/Build/Intermediates/PPNSdk.build/Debug-iphonesimulator/PPNSdk.build/module.modulemap"
+          'external-contents': "/Users/sameersiddiqui/Projects/PPNSdk/Build/Intermediates/PPNSdk.build/Release-iphonesimulator/PPNSdk.build/module.modulemap"
         }
       ]
     }

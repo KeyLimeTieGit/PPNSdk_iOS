@@ -15,6 +15,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+  
     
 }
 
@@ -22,8 +23,9 @@
     self.hotelPrice.text = [NSString stringWithFormat:@"$%@", self.hotel.display_price];
     self.hotelTitle.text = self.hotel.name;
     self.hotelReview.text = [NSString stringWithFormat:@"%@ of 5 stars",self.hotel.star_rating];
-    [self.hotelImage sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https:%@",self.hotel.thumbnailx150]]
-                 placeholderImage:[UIImage imageNamed:@"hotelplaceholder"]];
+    [self.hotelImage sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https:%@",self.hotel.thumbnailx300]]
+                 placeholderImage:[UIImage imageNamed:@"watermark"]];
+   
     self.neighborhood.text = self.hotel.neighborhood_name;
 }
 

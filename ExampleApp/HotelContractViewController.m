@@ -7,6 +7,8 @@
 //
 
 #import "HotelContractViewController.h"
+#import "UIViewController+Navigation.h"
+
 @import PPNSdk;
 
 @interface HotelContractViewController ()
@@ -29,6 +31,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self addBackButton];
+    [self setNavBarTitle:@"Credit Card screen"];
+    
     activity = [[UIActivityIndicatorView alloc]init];
     activity.center = self.view.center;
     [self.view addSubview:activity];

@@ -23,6 +23,8 @@
 @implementation ListViewController {
     NSArray *htls;
     UIActivityIndicatorView *activity;
+    NSString *checkin;
+    NSString *checkout;
 }
 
 + (ListViewController *)create{
@@ -46,7 +48,8 @@
     [self.view insertSubview:activity aboveSubview:self.tableView];
     [activity setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleGray];
     [activity hidesWhenStopped];
-    [self navBarWithAAAIconAndGearIconAndTitle:@"Hotels"];
+    [self addBackButton];
+    [self setNavBarTitle:[NSString stringWithFormat:@"Hotels in %@", self.city]];
 }
 
 - (void)getData {
@@ -57,6 +60,8 @@
     
     NSString *checkindate = [formatter stringFromDate:self.checkinDate];
     NSString *checkoutdate = [formatter stringFromDate:self.checkoutDate];
+    checkin = checkindate;
+    checkout = checkoutdate;
     
     dispatch_async(dispatch_get_main_queue(), ^{
         [activity startAnimating];
@@ -93,8 +98,17 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     HotelSearchHotelModel *model = [[HotelSearchHotelModel alloc]initWithJson:[htls objectAtIndex:indexPath.row]];
     HotelDetailViewController *vc = [HotelDetailViewController createwithHotelID:model.hotel_id];
-//    vc.passedDict = passedDict;
+    vc.checkinDate = checkin;
+    vc.checkoutDate = checkout;
+    vc.city = self.city;
+    vc.cityppnID = self.cityppnID;
+    vc.numberOfAdults = self.numberOfAdults;
+    vc.numberOfChildren = self.numberOfChildren;
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 200;
 }
 
 

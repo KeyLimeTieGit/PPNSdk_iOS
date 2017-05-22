@@ -19,18 +19,15 @@
 @end
 
 @implementation HotelRatesViewController {
-    NSString *hotelid;
-    NSDictionary *passedDict;
     NSArray *ratesArr;
     UIActivityIndicatorView *activity;
 
 }
 
-+ (HotelRatesViewController *)createwithHotelID:(NSString *)hotelID andPassedDictionary:(NSDictionary *)dict{
++ (HotelRatesViewController *)create{
     NSBundle *frameworkBundle = [NSBundle bundleForClass:[self class]];
     HotelRatesViewController *main = [[UIStoryboard storyboardWithName:@"Main" bundle:frameworkBundle] instantiateViewControllerWithIdentifier:NSStringFromClass([HotelRatesViewController class])];
-    main->hotelid = hotelID;
-    main->passedDict = dict;
+
     return main;
 }
 
@@ -40,7 +37,8 @@
     // Do any additional setup after loading the view.
     activity = [[UIActivityIndicatorView alloc]init];
     activity.center = self.view.center;
-    [self navBarWithAAAIconAndGearIconAndTitle:@"Rates"];
+    [self addBackButton];
+    [self setNavBarTitle:@"Rates"];
     [self.view insertSubview:activity aboveSubview:self.tableView];
     [activity setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleGray];
     [activity hidesWhenStopped];
@@ -49,18 +47,18 @@
         [activity startAnimating];
     });
     
-    NSLog(@"%@",passedDict);
-    NSString *checkinDate = [passedDict objectForKey:@"checkindate"];
-    NSString *checkoutDate = [passedDict objectForKey:@"checkoutdate"];
-    NSArray *checkinArray = [checkinDate componentsSeparatedByString:@"/"];
-    NSArray *checkoutArray = [checkoutDate componentsSeparatedByString:@"/"];
-    
-    NSString *newcheckin = [NSString stringWithFormat:@"%@-%@-%@",[checkinArray objectAtIndex:2],[checkinArray objectAtIndex:0],[checkinArray objectAtIndex:1]];
-    NSString *newcheckout = [NSString stringWithFormat:@"%@-%@-%@",[checkoutArray objectAtIndex:2],[checkoutArray objectAtIndex:0],[checkoutArray objectAtIndex:1]];
+//    NSLog(@"%@",passedDict);
+//    NSString *checkinDate = [passedDict objectForKey:@"checkindate"];
+//    NSString *checkoutDate = [passedDict objectForKey:@"checkoutdate"];
+//    NSArray *checkinArray = [checkinDate componentsSeparatedByString:@"/"];
+//    NSArray *checkoutArray = [checkoutDate componentsSeparatedByString:@"/"];
+//    
+//    NSString *newcheckin = [NSString stringWithFormat:@"%@-%@-%@",[checkinArray objectAtIndex:2],[checkinArray objectAtIndex:0],[checkinArray objectAtIndex:1]];
+//    NSString *newcheckout = [NSString stringWithFormat:@"%@-%@-%@",[checkoutArray objectAtIndex:2],[checkoutArray objectAtIndex:0],[checkoutArray objectAtIndex:1]];
 
     
     HotelRatesResults *results = [HotelRatesResults new];
-    [results getHotelRatesForHotelID:hotelid rooms:@"1" adults:@"1" children:@"0" checkin:newcheckin checkout:newcheckout withCompletionBlock:^(NSArray *rates, NSError *error) {
+    [results getHotelRatesForHotelID:self.hotelID rooms:@"1" adults:[NSString stringWithFormat:@"%d", self.numberOfAdults] children:[NSString stringWithFormat:@"%d", self.numberOfChildren] checkin:self.checkinDate checkout:self.checkoutDate withCompletionBlock:^(NSArray *rates, NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{
             ratesArr = rates;
             [self.tableView reloadData];
