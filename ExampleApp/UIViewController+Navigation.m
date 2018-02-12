@@ -31,10 +31,18 @@ UIButton *rightButton;
     // Create a custom button with the image
     UIButton *leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [leftButton setImage:image forState:UIControlStateNormal];
-    leftButton.frame = CGRectMake(0, 0, 44, 27);
+//    leftButton.frame = CGRectMake(0, 0, 44, 27);
     // Add the target
     [leftButton addTarget:self action:selector forControlEvents:UIControlEventTouchUpInside];
     leftButton.userInteractionEnabled = NO;
+    
+    NSLayoutConstraint * widthConstraint = [leftButton.widthAnchor constraintEqualToConstant:44];
+    NSLayoutConstraint * heightConstraint = [leftButton.heightAnchor constraintEqualToConstant:27];
+    
+    [heightConstraint setActive:YES];
+    [widthConstraint setActive:YES];
+    [leftButton addConstraint:widthConstraint];
+    [leftButton addConstraint:heightConstraint];
     
     // Add the container bar button
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:leftButton];
@@ -51,10 +59,18 @@ UIButton *rightButton;
 - (void)addBackButton {
     UIButton *leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [leftButton setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
-    leftButton.frame = CGRectMake(0, 0, 22, 22);
+//    leftButton.frame = CGRectMake(0, 0, 22, 22);
     // Add the target
     [leftButton addTarget:self action:@selector(goBackScreen) forControlEvents:UIControlEventTouchUpInside];
     leftButton.userInteractionEnabled = YES;
+    
+    NSLayoutConstraint * widthConstraint = [leftButton.widthAnchor constraintEqualToConstant:22];
+    NSLayoutConstraint * heightConstraint = [leftButton.heightAnchor constraintEqualToConstant:22];
+    
+    [heightConstraint setActive:YES];
+    [widthConstraint setActive:YES];
+    [leftButton addConstraint:widthConstraint];
+    [leftButton addConstraint:heightConstraint];
     
     // Add the container bar button
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:leftButton];

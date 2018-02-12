@@ -6,7 +6,7 @@
 	<dict>
 		<key>CalendarStoryboard.storyboardc/CalendarViewController.nib</key>
 		<data>
-		UFCVI4IAPttuwBfJDZQK33CdDPE=
+		bDDDGatlgMaiEk6IOXv1tJdUCME=
 		</data>
 		<key>CalendarStoryboard.storyboardc/Info.plist</key>
 		<data>
@@ -14,11 +14,11 @@
 		</data>
 		<key>CalendarStoryboard.storyboardc/mae-kI-H8S-view-WIv-Ht-oOT.nib</key>
 		<data>
-		n1j4e8WQv8jiIcfdbb2wO2EkJpg=
+		IkWUhiTuPq8Gw50qESHqdJVXOio=
 		</data>
 		<key>Headers/PopupCalendar-Swift.h</key>
 		<data>
-		z5Kb2EjmwlOdsjdwE3i6y/ZQnKc=
+		H1gXU3pc0RAqVnx5AYGjfZmYmC4=
 		</data>
 		<key>Headers/PopupCalendar.h</key>
 		<data>
@@ -26,27 +26,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Sp984eiQ8hmoUeCMvJvb+jnzu/o=
+		mELATI0BFOtrsxQfeSoFQzWTCx8=
 		</data>
-		<key>Modules/PopupCalendar.swiftmodule/i386.swiftdoc</key>
+		<key>Modules/PopupCalendar.swiftmodule/arm.swiftdoc</key>
 		<data>
-		vVjcm/ct/wyPOlq6ybkrD5Mx0AE=
+		tHjK+zpRaS0djHA8RCpLrqIIkrU=
 		</data>
-		<key>Modules/PopupCalendar.swiftmodule/i386.swiftmodule</key>
+		<key>Modules/PopupCalendar.swiftmodule/arm.swiftmodule</key>
 		<data>
-		2PiGkVU3rhF92SZ2wVUX+X3nK1o=
+		58aKvX/UEVg0jte1schK+p2u/xg=
 		</data>
-		<key>Modules/PopupCalendar.swiftmodule/x86_64.swiftdoc</key>
+		<key>Modules/PopupCalendar.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		2Ujt5r1T562CVGAlu1jezoCQ9Ps=
+		TGtZtwooY9PLJaxZDNSeNPQfjqk=
 		</data>
-		<key>Modules/PopupCalendar.swiftmodule/x86_64.swiftmodule</key>
+		<key>Modules/PopupCalendar.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		k+nDR0cVhAfUxn6KP9yH2Wa5U5s=
+		RgdSDeYFqlhH0KJJuz7PHvPEVyY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		CZ2gy4zFDhOeXUhLUuEB5a/L4m4=
+		T01I1/fEz/rC94xPqJu3c5P+bh0=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -55,11 +55,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			UFCVI4IAPttuwBfJDZQK33CdDPE=
+			bDDDGatlgMaiEk6IOXv1tJdUCME=
 			</data>
 			<key>hash2</key>
 			<data>
-			x5dJwkjxMcj0Zvkawelz9GwBKpmLUsOjqjLLe1NgdJ4=
+			afZssv8Tbm3cvGmtGkeTsP3F+1tGL1rR7Rq1bPqm8Og=
 			</data>
 		</dict>
 		<key>CalendarStoryboard.storyboardc/Info.plist</key>
@@ -77,22 +77,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			n1j4e8WQv8jiIcfdbb2wO2EkJpg=
+			IkWUhiTuPq8Gw50qESHqdJVXOio=
 			</data>
 			<key>hash2</key>
 			<data>
-			vh6ZLkQgkukj5++Xl8UGvf7gY6pcsHzVxD4Fzc0rfXM=
+			3YiaCKsbdhu+tF2WOKbXlAFnTKCwkZwaNYOq/N1dGPk=
 			</data>
 		</dict>
 		<key>Headers/PopupCalendar-Swift.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			z5Kb2EjmwlOdsjdwE3i6y/ZQnKc=
+			H1gXU3pc0RAqVnx5AYGjfZmYmC4=
 			</data>
 			<key>hash2</key>
 			<data>
-			w1mGxbQJAvZ9oUbtquJjFqPUcDS4AroFoZJYj3piYwA=
+			e8tZRw83urNo/E9e6/pVa/Nv7oTuKsWQehqZ8je5mjU=
 			</data>
 		</dict>
 		<key>Headers/PopupCalendar.h</key>
@@ -106,59 +106,59 @@
 			R6ch5F2CbF6KhGTS9sQT7LKkvtuGpXqQpr7CxcsDwpc=
 			</data>
 		</dict>
-		<key>Modules/PopupCalendar.swiftmodule/i386.swiftdoc</key>
+		<key>Modules/PopupCalendar.swiftmodule/arm.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			vVjcm/ct/wyPOlq6ybkrD5Mx0AE=
+			tHjK+zpRaS0djHA8RCpLrqIIkrU=
 			</data>
 			<key>hash2</key>
 			<data>
-			g/6RKe2UkZHNX2+xcgJF7ttdB4D3Jp4EU5zzKau5inY=
+			5CiJ0wCKv6PCsxTfwJLLoC8OVwBuEH9l+dw1DdO8htU=
 			</data>
 		</dict>
-		<key>Modules/PopupCalendar.swiftmodule/i386.swiftmodule</key>
+		<key>Modules/PopupCalendar.swiftmodule/arm.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			2PiGkVU3rhF92SZ2wVUX+X3nK1o=
+			58aKvX/UEVg0jte1schK+p2u/xg=
 			</data>
 			<key>hash2</key>
 			<data>
-			Tp8ExmicWRSFE6G6mhbAQQdIij2RcpzTiIZWGf7fw2o=
+			IPGcqmGubCaQBw8oDsK1YOwI7JJL4NCoh5EQQ0EYr9w=
 			</data>
 		</dict>
-		<key>Modules/PopupCalendar.swiftmodule/x86_64.swiftdoc</key>
+		<key>Modules/PopupCalendar.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			2Ujt5r1T562CVGAlu1jezoCQ9Ps=
+			TGtZtwooY9PLJaxZDNSeNPQfjqk=
 			</data>
 			<key>hash2</key>
 			<data>
-			aXp5/DbKr9axY4Fm2qomzqG0LtbqPK9wS3PfaVOZ4mY=
+			PcZc0ezvFRWFDDgLWjxYUh6Ci63N4YzTpnmgOeMm0W0=
 			</data>
 		</dict>
-		<key>Modules/PopupCalendar.swiftmodule/x86_64.swiftmodule</key>
+		<key>Modules/PopupCalendar.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			k+nDR0cVhAfUxn6KP9yH2Wa5U5s=
+			RgdSDeYFqlhH0KJJuz7PHvPEVyY=
 			</data>
 			<key>hash2</key>
 			<data>
-			iTvuHi1dHaCo5ptyswnWsYK1dta5jsQKCCTvqqEwBiM=
+			7LkORrAwEAUINCJHhj2tG5vKlgEZSLH5YGEKKCjO+rU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			CZ2gy4zFDhOeXUhLUuEB5a/L4m4=
+			T01I1/fEz/rC94xPqJu3c5P+bh0=
 			</data>
 			<key>hash2</key>
 			<data>
-			NRHOX6P+pVUl8tPh9of6Gnll2PtcATOxg2KCMhRltBw=
+			YmFvNcTaeF2fqn1s4LThS00iTh0hBVsRfTHMjXZLmZ0=
 			</data>
 		</dict>
 	</dict>
